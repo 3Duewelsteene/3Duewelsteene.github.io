@@ -257,6 +257,7 @@
     <script>
         $(document).ready(function () {
             $("form").submit(function (event) {
+                event.preventDefault();
                 var modal = document.getElementById("submitted");
                 modal.style.display = "block";
 
