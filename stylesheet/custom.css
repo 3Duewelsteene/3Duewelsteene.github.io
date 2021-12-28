@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Nav-Title{
+    font-size: xx-large;
+    font-weight: bolder;
+    color: rgb(70, 70, 70);
+}
+
+@media (max-width: 480px) {
+  .Nav-Title {
+    font-size:x-large;
+  }
+}
+
+@media (max-width: 340px) {
+  .Nav-Title {
+    font-size:large;
+  }
+}
+
+  section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+    padding-top: 50px;
+  }
+
+  
+  .card-container {
+    width: 85%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 30px;
+  }
+
+
+  .karte {
+    margin: 15px;
+    transform-style: preserve-3d;
+    height: 50%;
+    width: 80%;
+    border-radius: 5%;
+    padding: 3rem 2rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gizmo {
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .turn_stone {
+    max-width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 3;
+  }
+  
+  .turn_stone img {
+    width: 70%;
+    height: 70%;
+    margin-bottom: 25%;
+    z-index: 3;
+    align-items: center;
+    transition: all 0.75s ease-out;
+  }
+  
+  .bottom_stones {
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+  }
+  
+  .bottom_stones img {
+    margin-top: 10%;
+    width: 90%;
+    height: 90%;
+    z-index: 2;
+    align-items: center;
+    transition: all 0.75s ease-out;
+  }
+  
+  .circle {
+    width: fit-content;
+    max-width: 80%;
+    max-height: 45%;
+    display: flex;
+    position: absolute;
+    border-radius: 5%;
+  }
+  
+  .circle img {
+    width: 100%;
+    z-index: 1;
+    align-items: center;
+    transition: all 0.75s ease-out;
+    border-radius: 10%;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .info h2 {
+    font-size: 3rem;
+    transition: all 0.75s ease-out;
+    text-align: center;
+  }
+
+  @media (max-width: 580px) {
+    .info h2 {
+      font-size:x-large;
+    }
+  }
+
+  .info h3 {
+    padding: 2rem 0rem;
+    color: #585858;
+    font-weight: lighter;
+    transition: all 0.75s ease-out;
+    text-align: center;
+
+  }
+  .timeslots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    transition: all 0.75s ease-out;
+  }
+
+  .timeslots button {
+    margin-top: 20px;
+    padding: 0.5rem 2rem;
+    background: white;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #585858;
+  }
+ 
+  .more-information {
+    margin-top: 5rem;
+    transition: all 0.75s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .more-information button {
+    margin: 20px;
+    padding: 1rem 1rem;
+    background: #198754;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bolder;
+  }
