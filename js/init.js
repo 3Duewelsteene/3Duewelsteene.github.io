@@ -315,9 +315,9 @@ function certainReset(on) {
 	jQuery('#certain').css("visibility", "visible");
 	
   }
-  presenter.setInstanceVisibilityByName('Certain', false);
-  presenter.setInstanceVisibilityByName('Grundriss', true);
-  presenter.setInstanceVisibilityByName('Floor', true);
+  presenter.setInstanceVisibilityByName('Certain', false, true);
+  presenter.setInstanceVisibilityByName('Grundriss', true, true);
+  presenter.setInstanceVisibilityByName('Floor', true, true);
 }
 
 function layerReset(on) {
@@ -333,7 +333,7 @@ function layerReset(on) {
 	jQuery('#layer').css("visibility", "visible");
 	
   }
-  presenter.setInstanceVisibilityByName('Outer', false);
+  presenter.setInstanceVisibilityByName('Outer', false, true);
 }
 
 
@@ -364,10 +364,10 @@ function existingReset(on) {
 	  jQuery('#existing').css("visibility", "visible");
 	  
 	}
-	presenter.setInstanceVisibilityByName('Outer', false);
-	presenter.setInstanceVisibilityByName('Added', true);
-	presenter.setInstanceVisibilityByName('Border', true);
-	presenter.setInstanceVisibilityByName('Ortho', false);
+	presenter.setInstanceVisibilityByName('Outer', false, true);
+	presenter.setInstanceVisibilityByName('Added', true, true);
+	presenter.setInstanceVisibilityByName('Border', true, true);
+	presenter.setInstanceVisibilityByName('Ortho', false, true);
 }
 // ----
 
