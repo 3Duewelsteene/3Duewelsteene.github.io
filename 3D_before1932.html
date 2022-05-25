@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>3D Rekonstruktion - vor 1932 - 3Düwelsteene</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <meta name="description" content="3D Modell und Rekonstruktion des Megalithgrabes Düwelsteene bei Heiden.
+    Diese digitale Rekonstruktion zeigt das Großsteingrab in dem möglchen Zustand vor der Ausgrabung und Restaurierung im Jahr 1932. 
+    Das 3D Modell im 3D Viewer ist maßstabsgetreu, aber durch die Veränderung des SfM Grundmodells wurde eine neue Textur für die Steine genutzt.">
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="stylesheet/custom.css" />
+
+  <!-- Bootstrap CSS v5.2 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+    crossorigin="anonymous">
+
+
+    <!-- 3DHOP -->
+
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="stylesheet/3dhop.css" />
+    <!--SPIDERGL-->
+    <script src="js/spidergl.js"></script>
+    <!--JQUERY-->
+    <script src="js/jquery.js"></script>
+    <!--PRESENTER-->
+    <script src="js/presenter.js"></script>
+    <!--3D MODELS LOADING AND RENDERING-->
+    <script src="js/nexus.js"></script>
+    <script src="js/ply.js"></script>
+    <!--TRACKBALLS-->
+    <script src="js/trackball_turntable.js"></script>
+    <script src="js/trackball_turntable_pan.js"></script>
+    <script src="js/trackball_pantilt.js"></script>
+    <script src="js/trackball_sphere.js"></script>
+    <!--UTILITY-->
+    <script src="js/init.js"></script>
+    <script src="js/HotspotInfo.js"></script>
+
+    <!-- custom script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/loadingprogress.js"></script>
+
+</head>
+
+<body>
+    <!-- navigation-->
+    <nav class="navbar navbar-light bg-light py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="./img/logo.png" alt="3Duewelsteene Logo" width="80" height="80"
+                    class="d-inline-block align-text-center" />
+                <span class="Nav-Title">3Düwelsteene</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                        3Düwelsteene
+                    </h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">3Düwelsteene</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Infos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Rekonstruktionen
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                <li><a class="dropdown-item" href="3D_Today.html">Heute</a></li>
+                                <li><a class="dropdown-item active" href="3D_before1932.html">vor 1932</a></li>
+                                <li><a class="dropdown-item" href="3D_3000BC.html">um 3000 BC</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Feedback</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="3D_before1932_en.html"><img src="./img/UK.png" alt="english"
+                                    width="30" height="20" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- CONTENT -->
+
+    <!-- header section-->
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="./img/logo.png" alt="3Duewelsteene Logo" width="100" height="100">
+        <h1 class="display-5 fw-bold">Rekonstruktion Düwelsteene vor 1932</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Rekonstruktion des Grabes vor der Restaurierung 1932</p>
+        </div>
+    </div>
+
+    <!-- accordion section / Bilder erstezen. alt einfügen!!!-->
+    <div class="container">
+        <div class="container my-5">
+            <div class="accordion" id="accordionPanelsStayOpen">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-Reconstruction">
+                        <button class="accordion-button  bg-light" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseReconstruction" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseReconstruction">
+                            Die Rekonstruktion
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseReconstruction" class="accordion-collapse collapse show"
+                        aria-labelledby="panelsStayOpen-Reconstruction">
+                        <div class="accordion-body">
+                            <div class="row flex-lg-row-reverse align-items-center">
+                                <div class="col-12 col-lg-4">
+                                    <img src="./img/Grabung1932Stein12.jpg" class="d-block mx-lg-auto img-fluid"
+                                        alt="Grabungsfoto 1932" loading="lazy" width="500" height="200" />
+                                    <p class="text-muted">Grabungsfoto 1932 (LWL-Altertumskommission für Westfalen/Stieren)</p>
+                                </div>
+                                <div class="col-12 col-lg-8">
+                                    <p>
+                                        Nach der Grabung 1932, die unter archäologischer Aufsicht durchgeführt worden
+                                        war, wurde das Megalithgrab restauriert und die Steine wurden dem damaligen
+                                        Wissensstand nach versetzt und das Grab rekonstruiert. Es sind Fotografien von
+                                        der Grabung vorhanden, auch Zeichnungen des Großsteingrabes wurden während der
+                                        Grabung angefertigt. Allerdings gibt es keine genauen Aufzeichnung, wo die Steine
+                                        vor und während der Grabung positioniert waren.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-8">
+                                    <p>
+                                        Um zu rekonstruieren, wie die Düwelsteene vor der Restaurierung ausgesehen haben
+                                        könnten, wurde ein Citizen-Science Projekt durchgeführt. Hierbei wurden Heidener
+                                        Bürgerinnen und Bürger angefragt, ob sie Bilder zur Verfügung stellen könnten,
+                                        die die Düwelsteene vor den Restaurierungsmaßnahmen zeigen. Mit Hilfe dieser
+                                        Fotografien konnten die Megalithsteine digital in die Position zurückgesetzt
+                                        werden und das Großsteingrab ist dadurch wieder virtuell in seinem Originalzustand vor 1932 zu sehen.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <img src="./img/ScreenshotBefore1932.jpg" class="d-block mx-lg-auto img-fluid"
+                                        alt="3D Modell der Rekonstruktion vor 1932" loading="lazy" width="500" height="200" />
+                                    <p class="text-muted">3D Modell der Rekonstruktion vor 1932</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-Sources">
+                        <button class="accordion-button collapsed  bg-light" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseSources" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseSources">
+                            Die Quellen
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSources" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-Sources">
+                        <div class="accordion-body">
+                            <div class="row flex-lg-row-reverse align-items-center">
+                                <div class="col-12 col-lg-8">
+                                    <p>
+                                        Das 3D Modell der Düwelsteene, welches durch den 3D Scan erstellt worden war,
+                                        wurde genutzt um jeden einzelnen Stein „herauszuschneiden“, sodass diese
+                                        Megalithsteine nun frei bewegbar genutzt werden konnten. Die Lücken an den
+                                        Steinen, die durch das Herausnehmen aus dem 3D Modell entstanden, wurden durch
+                                        den Poisson-Surface-Reconstruction Algorithmus in der Software CloudCompare
+                                        geschlossen. Durch das Citizen-Science-Projekt „Stein für Stein zurück in die
+                                        Vergangenheit. Bürgerwissenschaft unterstützt die Rekonstruktion des
+                                        Großsteingrabs Düwelsteene“ des LWL und der Beteiligung der Einwohner und Einwohnerinnen von Heiden
+                                        und Umgebung, konnten die Bilder des Grabes für die Rekonstruktion des Grabes
+                                        genutzt werden. Die Fotografien wurden in dem 3D Programm Blender positioniert,
+                                        so dass die Megalithsteine wieder digital „zurückgedreht“ werden konnten.
+                                    </p>
+                                    <a
+                                        href="https://blog.altertumskommission.lwl.org/de/hier-bleibt-kein-stein-auf-dem-anderen/">
+                                        weitere Informationen zur Rekonstruktion und dem Citizen-Science-Projekt</a>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <img src="./img/2014to1932.jpg" class="d-block mx-lg-auto img-fluid border"
+                                        alt="Vom heutigen 3D Modell zum Modell von vor 1932" loading="lazy" width="500" height="200" />
+                                    <p class="text-muted">Vom heutigen 3D Modell zum Modell vor 1932</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-Workflow">
+                        <button class="accordion-button collapsed  bg-light" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseWorkflow" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseWorkflow">
+                            Der Workflow
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseWorkflow" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-Workflow">
+                        <div class="accordion-body">
+                            <div class="row flex-lg-row-reverse align-items-center">
+                                <div class="col-12 col-lg-4">
+                                    <img src="./img/1932to2014.jpg" class="d-block mx-lg-auto img-fluid"
+                                        alt="Standort der Steine heute und vor 1932" loading="lazy" width="500" height="200" />
+                                    <p class="text-muted">Standort der Steine heute und vor 1932</p>
+                                </div>
+                                <div class="col-12 col-lg-8">
+                                    <p>
+                                        Nach dem Herausschneiden aus dem 3D Model, das durch Image Based
+                                        Modelling erstellt worden war, wurden die Steine in der Software CloudCompare mit
+                                        dem Poisson-Surface-Reconstruction Algorithmus geschlossen. Durch die
+                                        Form-Änderung an den Steinen verloren die Megalithen auch ihre originale Textur
+                                        (Farbe). Nach der Repositionierung mit Hilfe der alten Fotografien in dem 3D
+                                        Programm Blender, wurde dort die 3D Steine des Grabes neu texturiert. Zur
+                                        Unterscheidung zwischen Original Fläche der Megalithsteine und der durch den
+                                        Algorithmus geschlossenen Fläche, wurde in Blender der Wireframe Modifier
+                                        genutz, sodass der Unterschied zwischen Rekonstruktion und Original deutlich zu
+                                        sehen ist.
+                                        <br>
+                                        <a href="https://ambientcg.com/view?id=Rock002">Die für die Düwelsteene genutzte
+                                            Textur.</a>
+                                    </p>
+                                    <p>
+                                        Anhand des heutigen 3D Modells wurde auch ein Orthofoto erstellt, welches als Basis
+                                        für die Grundrisszeichnung dient, die auch im Modell der Düwelsteene heutzutage
+                                        zu sehen ist. Durch die Verwendung des Orthofotos ist der Grundrissplan
+                                        maßstabsgetreu und verzerrungsfrei.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-Navigation">
+                        <button class="accordion-button collapsed  bg-light" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseNavigation" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseNavigation">
+                            <img src="./skins/dark/help.png" class="me-2" alt="Info Bild" loading="lazy" width="30" height="30"> Navigieren des 3D Models
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseNavigation" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-Navigation">
+                        <div class="accordion-body">
+                            <div class="container">
+                                <p>In der Navigation des 3D Browser sind folgende Optionen zu finden:</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-2 col-3 pt-2 text-center border border-light">
+                                                <img class="rounded mx-auto d-block" src="./skins/dark/home.png" alt="home"
+                                                    width="40" height="40">
+                                            </div>
+                                            <div class="col-lg-11 col-md-10 col-9 pt-3 border border-light">
+                                                <p> Zurück zur Ausgangsposition</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-2 col-3 pt-2 text-center border border-light">
+                                                <img class="rounded mx-auto d-block" src="./skins/dark/meta.png" alt="metadaten"
+                                                    width="40" height="40">
+                                            </div>
+                                            <div class="col-lg-11 col-md-10 col-9 pt-3 border border-light">
+                                                <p> Metadaten aufrufen</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-2 col-3 pt-2 text-center border border-light">
+                                                <img class="rounded mx-auto d-block" src="./skins/dark/zoomin.png"
+                                                    alt="Zoom in" width="40" height="40">
+                                            </div>
+                                            <div class="col-lg-11 col-md-10 col-9 pt-3 border border-light">
+                                                <p> Näher an das Modell zoomen</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-2 col-3 pt-2 text-center border border-light">
+                                                <img class="rounded mx-auto d-block" src="./skins/dark/zoomout.png"
+                                                    alt="zoom out" width="40" height="40">
+                                            </div>
+                                            <div class="col-lg-11 col-md-10 col-9 pt-3 border border-light">
+                                                <p> Vom Modell weg zoomen</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-2 col-3 pt-2 text-center border border-light">
+                                                <img class="rounded mx-auto d-block" src="./skins/dark/lightcontrol.png"
+                                                    alt="licht kontrollieren" width="40" height="40">
+                                            </div>
+                                            <div class="col-lg-11 col-md-10 col-9 pt-3 border border-light">
+                                                <p> Die Position der Lichtquelle im 3D Browser ändern und festlegen
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-2 col-3 pt-2 text-center border border-light">
+                                                <img class="rounded mx-auto d-block" src="./skins/dark/measure.png"
+                                                    alt="messen" width="40" height="40">
+                                            </div>
+                                            <div class="col-lg-11 col-md-10 col-9 pt-3 border border-light">
+                                                <p> Distanz messen durch das Festlegen zweier Punkte am Modell</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-2 col-3 pt-2 text-center border border-light">
+                                                <img class="rounded mx-auto d-block" src="./skins/dark/certain.png"
+                                                    alt="messen" width="40" height="40">
+                                            </div>
+                                            <div class="col-lg-11 col-md-10 col-9 pt-3 border border-light">
+                                                <p> Wahrscheinlichkeit der Position der einzelnen Steine in der Rekonstruktion anzeigen</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-2 col-3 pt-2 text-center border border-light">
+                                                <img class="rounded mx-auto d-block" src="./skins/dark/pin.png" alt="informationspunkte"
+                                                    width="40" height="40">
+                                            </div>
+                                            <div class="col-lg-11 col-md-10 col-9 pt-3 border border-light">
+                                                <p> Informationspunkte sichtbar machen, für Erklärungen innerhalb des Modells</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-2 col-3 pt-2 text-center border border-light">
+                                                <img class="rounded mx-auto d-block" src="./skins/dark/sections.png"
+                                                    alt="sektionieren" width="40" height="40">
+                                            </div>
+                                            <div class="col-lg-11 col-md-10 col-9 pt-3 border border-light">
+                                                <p> Teilen des Modells in verschieden Sektionen, um nur Teile des
+                                                    Modells sichtbar zu machen.
+                                                    <br>
+                                                    Die farbigen Trennwende und Umrisse können durch das wegklicken
+                                                    der Häkchen entfernt werden.
+                                                    <br>
+                                                    Das Verschieben der Sektionsregler verändert die Position der
+                                                    Trennung im Modell.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-2 col-3 pt-2 text-center border border-light">
+                                                <img class="rounded mx-auto d-block" src="./skins/dark/full.png" alt="full screen"
+                                                    width="40" height="40">
+                                            </div>
+                                            <div class="col-lg-11 col-md-10 col-9 pt-3 border border-light">
+                                                <p> Das Modell im Fullscreen Modus betrachten</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <p>Am Computer:
+                                    <br>
+                                    Die linke Maustaste dreht das Modell, mit der rechten Maustaste kann das komplette
+                                    Modell verschoben werden.
+                                </p>
+                                <p>Mobil:
+                                    <br>
+                                    Durch das Ziehen des Fingers über den Bildschirm dreht sich das Modell.
+                                    <br>
+                                    Einfaches Zoomen mit zwei Fingern, die sich voneinander entfernen.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3D section -->
+
+    <div class="container-md" style="min-height: 95vh">
+        
+        <div class="loader mx-3">
+            <div class="d-flex align-items-center">
+                <span class="text-muted">Bitte warten bis das Modell geladen ist</span>
+                <div class="spinner-border ms-auto spinner-border-sm" role="status" aria-hidden="true"></div>
+            </div>
+        </div>
+        <div class="col">
+            <div id="3dhop" class="tdhop" onmousedown="if (event.preventDefault) event.preventDefault()">
+                <div id="tdhlg"></div>
+                <div id="toolbar">
+                    <img id="home" title="Home" src="skins/dark/home.png" /><br />
+                    <!--INFO-->
+                    <img id="info" data-bs-toggle="modal" data-bs-target="#infobox" title="Informationen zeigen"
+                        src="skins/dark/meta.png" /><br />
+                    <!--INFO-->
+                    <!--ZOOM-->
+                    <img id="zoomin" title="Zoom In" src="skins/dark/zoomin.png" /><br />
+                    <img id="zoomout" title="Zoom Out" src="skins/dark/zoomout.png" /><br />
+                    <!--ZOOM-->
+                    <!--LIGHT-->
+                    <img id="light_on" title="Licht Kontrolle beenden" src="skins/dark/lightcontrol_on.png"
+                        style="position:absolute; visibility:hidden;" />
+                    <img id="light" title="Licht kontrollieren" src="skins/dark/lightcontrol.png" /><br />
+                    <!--LIGHT-->
+                    <!--MEASURE-->
+                    <img id="measure_on" title="Messen beenden" src="skins/dark/measure_on.png"
+                        style="position:absolute; visibility:hidden;" />
+                    <img id="measure" title="Messen" src="skins/dark/measure.png" /><br />
+                    <!--MEASURE-->
+                    <!--CERTAIN-->
+                    <img id="certain_on" title="Gewissheit ausblenden" src="skins/dark/certain_on.png"
+                        style="position:absolute; visibility:hidden;" />
+                    <img id="certain" title="Gewissheit einblenden" src="skins/dark/certain.png" /><br />
+                    <!--CERTAIN-->
+                    <!--SHOW HOTSPOTS-->
+                    <img id="hotspot_on" title="Annotationen ausblenden" src="skins/dark/pin_on.png"
+                        style="position:absolute;" />
+                    <img id="hotspot" title="Annotationen einblenden" src="skins/dark/pin.png" /><br />
+                    <!--SHOW HOTSPOTS-->
+                    <!--SECTIONS-->
+                    <img id="sections_on" title="Trennung in Ebenen ausblenden" src="skins/dark/sections_on.png"
+                        style="position:absolute; visibility:hidden;" />
+                    <img id="sections" title="Trennung in Ebenen einblenden" src="skins/dark/sections.png" /><br />
+                    <!--SECTIONS-->
+                    <!--FULLSCREEN-->
+                    <img id="full_on" title="Full Screen beenden" src="skins/dark/full_on.png"
+                        style="position:absolute; visibility:hidden;" />
+                    <img id="full" title="Full Screen" src="skins/dark/full.png" />
+                    <!--FULLSCREEN-->
+                </div>
+
+                <!--MEASURE-->
+                <div id="measure-box" class="output-box">gemessene Länge:
+                    <hr /><span id="measure-output" class="output-text" onmousedown="event.stopPropagation()">0.0</span>
+                </div>
+                <!--MEASURE-->
+
+                <!--SECTIONS-->
+                <div id="sections-box" class="output-box">
+                    <table class="output-table" onmousedown="event.stopPropagation()">
+                        <tr>
+                            <td>Ebene</td>
+                            <td>Position</td>
+                            <td>Umkehren</td>
+                        </tr>
+                        <tr>
+                            <td><img id="xplane_on" title="Disable X Axis Section" src="skins/icons/sectionX_on.png"
+                                    onclick="sectionxSwitch()"
+                                    style="position:absolute; visibility:hidden; border:1px inset;" />
+                                <img id="xplane" title="Enable X Axis Section" src="skins/icons/sectionX.png"
+                                    onclick="sectionxSwitch()" /><br />
+                            </td>
+                            <td><input id="xplaneSlider" class="output-input" type="range"
+                                    title="Move X Axis Section Position" /></td>
+                            <td><input id="xplaneFlip" class="output-input" type="checkbox"
+                                    title="Flip X Axis Section Direction" /></td>
+                        </tr>
+                        <tr>
+                            <td><img id="yplane_on" title="Disable Y Axis Section" src="skins/icons/sectionY_on.png"
+                                    onclick="sectionySwitch()"
+                                    style="position:absolute; visibility:hidden; border:1px inset;" />
+                                <img id="yplane" title="Enable Y Axis Section" src="skins/icons/sectionY.png"
+                                    onclick="sectionySwitch()" /><br />
+                            </td>
+                            <td><input id="yplaneSlider" class="output-input" type="range"
+                                    title="Move Y Axis Section Position" /></td>
+                            <td><input id="yplaneFlip" class="output-input" type="checkbox"
+                                    title="Flip Y Axis Section Direction" /></td>
+                        </tr>
+                        <tr>
+                            <td><img id="zplane_on" title="Disable Z Axis Section" src="skins/icons/sectionZ_on.png"
+                                    onclick="sectionzSwitch()"
+                                    style="position:absolute; visibility:hidden; border:1px inset;" />
+                                <img id="zplane" title="Enable Z Axis Section" src="skins/icons/sectionZ.png"
+                                    onclick="sectionzSwitch()" /><br />
+                            </td>
+                            <td><input id="zplaneSlider" class="output-input" type="range"
+                                    title="Move Y Axis Section Position" /></td>
+                            <td><input id="zplaneFlip" class="output-input" type="checkbox"
+                                    title="Flip Z Axis Section Direction" /></td>
+                        </tr>
+                    </table>
+                    <table class="output-table" onmousedown="event.stopPropagation()" style="text-align:right;">
+                        <tr>
+                            <td>Ebenen zeigen<input id="showPlane" class="output-input" type="checkbox"
+                                title="Show Section Planes" style="bottom:-3px;" /></td>
+                            <td>Rand zeigen<input id="showBorder" class="output-input" type="checkbox"
+                                title="Show Section Edges" style="bottom:-3px;" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <!--SECTIONS-->
+
+                <!--background canvas-->
+                <canvas id="draw-canvas"
+                    style="background-image: url(skins/backgrounds/lightblue_empty_grid.jpg)"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!--INFOBOX-->
+    <div id="infobox" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Metadata</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Typ</th>
+                                <th scope="col">Informationen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Software</th>
+                                <td>CloudCompare
+                                    <br>
+                                    MeshLab
+                                    <br>
+                                    Blender
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Technik</th>
+                                <td>SfM
+                                    <br>
+                                    3D Modellierung (Rekonstruktion)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Geometrie</th>
+                                <td>Grab: 441.865 Dreiecke
+                                    <br>
+                                    Grundriss: 24.228 Dreiecke
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Eckpunkte (Vertices)</th>
+                                <td>Grab: 170.886
+                                    <br>
+                                    Grundriss: 12.222
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Dateiformat</th>
+                                <td>.ply</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Dateigröße</th>
+                                <td>Grab: 37.881 KB
+                                    <br>
+                                    Grundriss: 1.746 KB</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Textur</th>
+                                <td>Foto Textur
+                                    <br>
+                                    &
+                                    <br>
+                                    Base Color Map</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Dimensionen</th>
+                                <td>Länge: 13,2 m
+                                    <br>
+                                    Breite: 4,7 m
+                                    <br>
+                                    Höhe: 2,5 m
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Maßstab</th>
+                                <td>1:1</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Erstelldatum</th>
+                                <td>März 2022</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--INFOBOX-->
+
+    <!--HotSpot Text Section-->
+    <div id="linienheute1932" class="modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title">Grundriss der Düwelsteene heute</h5>
+                    <h3 class="closeModal">&times;</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Diese Grundrisszeichnung basiert auf einem Orthofoto (eine verzerrungsfreie und maßstabsgetreue
+                        Abbildung) und zeigt die Position der Steine des Megalithgrabes, wie sie heutzutage zu sehen
+                        sind. Das dreidimensionale Rekonstruktions-Modell über dem Grundriss von heute, zeigt das Megalithgrab, 
+                        wie es möglicherweise vor der Restaurierung 1932 positioniert war.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="positionsteine" class="modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title">Rekonstruierte Position</h5>
+                    <h3 class="closeModal">&times;</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Das 3D Modell zeigt die Rekonstruktion der Düwelsteene, das heißt, wie die Steine vor der Grabung
+                        und vor der Restaurierung vermutlich positioniert waren. Dank der Grabungsfotos, konnten einige Steine als "in situ" 
+                        klassifiziert werden: diese Steine wurden sehr wahrscheinlich durch die Grabung und Restaurierung nicht bewegt 
+                        oder verändert und sind in Originallage vorzufinden.</p>
+                        <img src="./img/Grabung1932Stein12.jpg" class="img-fluid" alt="Foto der Grabung 1932">
+                        <p class="text-muted">Grabungsfoto der Düwelsteene 1932 (LWL-Altertumskommission für Westfalen/Stieren)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wireframenetz" class="modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title">Gitternetz</h5>
+                    <h3 class="closeModal">&times;</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Zur Differenzierung zwischen 3D Scan und Rekonstruktion an den Steinen wurde ein Gitternetz modelliert. Die genutzte Poisson Surface
+                        Reconstruction bedeutet: ein Schließen des 3D Modells an den Positionen, wo keine
+                        Aufnahmen für den 3D Scan gemacht werden konnten. Dies hat auch die Form dieser Gitternetze zur Folge, da die Findling an diesen Stellen im Boden waren oder von anderen Steinen
+                        verdeckt wurden.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="gewissheit" class="modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title">Wahrscheinlichkeit</h5>
+                    <h3 class="closeModal">&times;</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Dank der Fotos, die durch das Citizen Science Projekt gesammelt wurden, 
+                        konnte das Großsteingrab so rekonstruiert werden, wie es vor der Restaurierung 1932 
+                        ausgesehen haben könnte. Mit Hilfe der Grabungsfotos von 1932 und den privaten Bildern, die für das Citizen Science Projekt zur Verfügung wurden, 
+                        konnten die Steine des heutigen Zustands mit den alten Fotos verglichen werden. Einige markante Steine sind so häufig auf den 
+                        Fotografien zu sehen, dass sie digital in die mit hoher Wahrscheinlichkeit ursprüngliche Position "zurückgedreht" werden konnten. Von anderen Steinen gab es kaum Aufnahmen,
+                        sodass die Position der Steine nur mit geringer Sicherheit festgelegt werden konnte. </p>
+                    <p>In dem farbigen Wahrscheinlichkeits-Modell ist zu sehen, welche Steine des Megalithgrabes 
+                        mit welcher Wahrscheinlichkeit positioniert wurden. </p>
+                    <p>Die Wahrscheinlichkeit verläuft von <span class="redZero">0 - 20 %</span> über <span class="orangeTwenty">20 - 50 %</span> 
+                        und <span class="yellowFifty">50 - 80 % </span> bis zu <span class="greenEighty">80 - 100 % </span>  </p>
+                    <p class="text-muted">(Um die Wahrscheinlichkeit zu sehen, auf <img src="skins/dark/certain.png" alt="Wahrscheinlichkeit anzeigen" style="width: 50px;"> clicken)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- project section-->
+    <div class="container col-xxl-10 px-3 py-3 my-3">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="./img/logo.png" class="d-block mx-lg-auto img-fluid" alt="3Duewelsteene Logo" loading="lazy" width="500"
+                    height="300" />
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">
+                    Rekonstruktionen
+                </h1>
+                <p class="lead">
+                    1932 wurden die Düwelsteene nach einer archäologischen Grabung restauriert. Auf dieser Webseite wird
+                    die Zeit nun digital zurückgedreht. Es ist möglich die Düwelsteene als 3D Scan virtuell in dem Zustand zu sehen,
+                    wie das Megalithgrab heute aufzufinden ist. Das Grab ist aber auch als 3D Rekonstruktion zu sehen, wie es
+                    vor der Restaurierung 1932 wahrscheinlich gestanden hat. Eine weitere virtuelle Rekonstruktion zeigt das Megalithgrab 
+                    der Trichterbecherkultur, wie es vor 5000 Jahren ausgesehen haben könnte.
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            weitere Rekonstruktionen
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="3D_Today.html">Heute</a></li>
+                            <li><a class="dropdown-item" href="3D_3000BC.html">um 3000 BC</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- information section-->
+    <div class="container-fluid bg-light">
+        <div class="container col-xxl-9 px-3 py-5 my-5">
+            <div class="row flex-lg-row h-100">
+                <div class="col-md-6 my-2">
+                    <div class="card flex-md-row mb-4 h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Infos</h5>
+                            <p class="card-text">
+                                Anfahrt zum Megalithgrab, Informationen zur Restaurierung des Grabes 1932 und den aktuellen 3D
+                                Rekonstruktionen, Informationen zur Grabungsgeschichte, sowie Sagen zur Enstehung des Großsteingrabes 
+                                und Enstehung des Namens Düwelsteene.
+                            </p>
+                            <a href="about.html" class="btn btn-primary">weitere Infos</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="card flex-md-row mb-4 h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Feedback</h5>
+                            <p class="card-text">
+                                Diese Webseite dient zur visuellen Unterstützung der Düwelsteene und ist für die
+                                Rekonstruktionen dieses Megalithgrabes angelegt. Um die Webseite anzupassen und für die
+                                Zukunft besser zu
+                                machen, wäre es sehr hilfreich, wenn kurz das Feedback ausgefüllt wird!
+                            </p>
+                            <a href="contact.html" class="btn btn-primary">Feedback</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer-->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p class="col-sm-5 mb-0 text-muted">© 2022 ltharandt - powered by <a href="https://getbootstrap.com/"
+              class="link-secondary" style="text-decoration: none">Bootstrap</a> and <a href="https://3dhop.net/"
+              class="link-secondary" style="text-decoration: none">3DHOP</a></p>
+    
+          <a href="index.html"> <img src="./img/logo.png" alt="3Duewelsteene Logo" width="50" height="50"
+              class="d-inline-block align-text-center" /></a>
+    
+    
+          <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item">
+              <a href="3D_before1932.html" class="nav-link px-2 text-muted"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+              </svg></a>
+            </li>
+            <li class="nav-item">
+              <a href="privacy_en.html" class="nav-link px-2 text-muted"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                  height="16" fill="currentColor" class="bi bi-shield-shaded" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M8 14.933a.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067v13.866zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" />
+                </svg></a>
+            </li>
+            <li class="nav-item">
+              <a href="https://twitter.com/3Duewelsteene?ref_src=twsrc%5Etfw" class="nav-link px-2 text-muted"> <svg
+                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                </svg></a>
+            </li>
+            <li class="nav-item">
+              <a href="https://github.com/3Duewelsteene/3Duewelsteene.github.io" class="nav-link px-2 text-muted"> <svg
+                  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                </svg></a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+
+  <!-- Bootstrap v5.2 JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"></script>
+
+
+<!-- 3DHOP -->
+
+<!-- 3D Script -->
+<script>
+    var presenter = null;
+
+    function setup3dhop() {
+        presenter = new Presenter("draw-canvas");
+
+        //--3D MODEL--
+        presenter.setScene({
+            meshes: {
+                "Stone": { url: "models/1932Duewelsteene.ply" },
+                "Certainty": { url: "models/1932DuewelsteeneCertainty.ply" },
+                "Ground": { url: "models/1932PreRestorationGround.ply" },
+                "Lines": { url: "models/OrthoPlan.ply" },
+                "Circle": { url: "models/sphere.ply" }
+            },
+            modelInstances: {
+                "1932": {
+                    mesh: "Stone"
+                },
+                "Grundriss": {
+                    mesh: "Lines",
+                    transform: {
+                        matrix: SglMat4.mul(SglMat4.translation([0.5, -2.3, -0.22]), SglMat4.scaling([1.0, 1.0, 1.0]))
+                    }
+                },
+                "Floor": {
+                    mesh: "Ground",
+                    transform: {
+                        matrix: SglMat4.mul(SglMat4.translation([0.1, -0.1, 0.2]), SglMat4.scaling([1.0, 1.0, 0.75]))
+                    },
+                    useTransparency: true,
+                    alpha: 0.6
+                },
+                "Certain": {
+                    mesh: "Certainty",
+                    visible: false,
+                    transform: {
+                        matrix: SglMat4.mul(SglMat4.translation([0, -0.06, 0]), SglMat4.scaling([1.0, 1.0, 1.0]))
+                    },
+                    useTransparency: false,
+                    alpha: 1
+                }
+            },
+            spots: {
+                "grabheutelinien": {
+                    mesh: "Circle",
+                    transform: {
+                        matrix: SglMat4.mul(SglMat4.translation([-5.5, -0.88, -2.8]), SglMat4.scaling([0.2, 0.2, 0.2]))
+                    },
+                    color: [0.0, 0.25, 1.0],
+                    alpha: 0.5,
+                    alphaHigh: 0.8
+                },
+                "positionsteine": {
+                    mesh: "Circle",
+                    transform: {
+                        matrix: SglMat4.mul(SglMat4.translation([6, 0.8, -0.5]), SglMat4.scaling([0.2, 0.2, 0.2]))
+                    },
+                    color: [0.0, 0.25, 1.0],
+                    alpha: 0.5,
+                    alphaHigh: 0.8
+                },
+                "wireframe": {
+                    mesh: "Circle",
+                    transform: {
+                        matrix: SglMat4.mul(SglMat4.translation([-0.35, 0.1, 1.4]), SglMat4.scaling([0.2, 0.2, 0.2]))
+                    },
+                    color: [0.0, 0.25, 1.0],
+                    alpha: 0.5,
+                    alphaHigh: 0.8
+                },
+                "UnCertainty": {
+                    mesh: "Circle",
+                    transform: {
+                        matrix: SglMat4.mul(SglMat4.translation([-0.48, -1.05, 3.4]), SglMat4.scaling([0.2, 0.2, 0.2]))
+                    },
+                    color: [0.0, 0.25, 1.0],
+                    alpha: 0.5,
+                    alphaHigh: 0.8
+                }
+            },
+            trackball: {
+                type: TurntablePanTrackball,
+                trackOptions: {
+                    startPhi: 0.0,
+                    startTheta: 0.0,
+                    startDistance: 1.0,
+                    startPanX: 0.0,
+                    startPanY: 0.0,
+                    startPanZ: 0.0,
+                    minMaxPhi: [-180, 180],
+                    minMaxTheta: [-45.0, 90.0],
+                    minMaxDist: [0.2, 1.5],
+                    minMaxPanX: [-0.5, 0.5],
+                    minMaxPanY: [-0.6, 0.6],
+                    minMaxPanZ: [-0.3, 0.3],
+                }
+            },
+            config: {
+                showClippingPlanes: true,
+                showClippingBorder: true,
+                clippingBorderSize: 0.01,
+                clippingBorderColor: [0.0, 1.0, 1.0]
+            },
+            space: {
+                centerMode: "scene",
+                radiusMode: "scene"
+            }
+        });
+
+        presenter.setSpotVisibility(HOP_ALL, true);
+
+        presenter._onPickedSpot = onPickedSpot;
+
+
+        //--MEASURE--
+        presenter._onEndMeasurement = onEndMeasure;
+        //--MEASURE--
+
+    }
+
+    function actionsToolbar(action) {
+        if (action == 'home') presenter.resetTrackball(), sectiontoolReset(), certainReset();
+        //--FULLSCREEN--
+        else if (action == 'full' || action == 'full_on') fullscreenSwitch();
+        //--FULLSCREEN--
+        //--ZOOM--
+        else if (action == 'zoomin') presenter.zoomIn();
+        else if (action == 'zoomout') presenter.zoomOut();
+        //--ZOOM--
+        //--LIGHT--
+        else if (action == 'light' || action == 'light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); }
+        //--LIGHT--
+        //--MEASURE--
+        else if (action == 'measure' || action == 'measure_on') { presenter.enableMeasurementTool(!presenter.isMeasurementToolEnabled()); measureSwitch(); }
+        //--MEASURE--
+        //--SHOW HOTSPOT--
+        else if (action == 'hotspot' || action == 'hotspot_on') { presenter.toggleSpotVisibility(HOP_ALL, true); presenter.enableOnHover(!presenter.isOnHoverEnabled()); hotspotSwitch(); }
+        //--SHOW HOTSPOT--
+        //--SECTIONS--
+        else if (action == 'sections' || action == 'sections_on') { sectiontoolReset(); sectiontoolSwitch(); }
+        //--SECTIONS--
+        //--HILL--
+        else if (action == 'certain' || action == 'certain_on') { presenter.toggleInstanceVisibilityByName('Certain', true); presenter.toggleInstanceVisibilityByName('Grundriss',false); presenter.toggleInstanceVisibilityByName('Floor',false);certainSwitch(); }
+        //--HILL--
+    }
+
+    //--MEASURE--
+    function onEndMeasure(measure) {
+        // measure.toFixed(2) sets the number of decimals when displaying the measure
+        // depending on the model measure units, use "mm","m","km" or whatever you have
+        $('#measure-output').html(measure.toFixed(2) + " m");
+    }
+    //--MEASURE--
+
+    //--SHOW HOTSPOT--
+    function onPickedSpot(id) {
+        switch (id) {
+            case 'grabheutelinien': setInfo(11); presenter.animateToTrackballPosition([0, 90, 0, 0, 0, 1]); break;
+            case 'positionsteine': setInfo(12);  presenter.animateToTrackballPosition([30, 20, 0.35, 0, 0, 0.3]);break;
+            case 'wireframe': setInfo(13);  presenter.animateToTrackballPosition([-10, 10, 0, 0, 0, 0.1]); break;
+            case 'UnCertainty': setInfo(23);  presenter.animateToTrackballPosition([5, 30, -0.2, 0, 0, 0.6]); break;
+        }
+    }
+    //--SHOW HOTSPOT--	
+
+    $(document).ready(function () {
+        init3dhop();
+
+        setup3dhop();
+
+        sectiontoolInit();
+        ;
+    });
+</script>
+
+</body>
+
+</html>
