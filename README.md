@@ -9,7 +9,7 @@ with the help of [Bootstrap](https://getbootstrap.com/) and [3DHOP](https://gith
 
 ### -> 3D Viewer (by [3DHOP](https://github.com/cnr-isti-vclab/3DHOP)) : [GNU 3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-### -> **Images marked as LWL-Altertumskommission für Westfalen** belong to the Altertumskommission für Westfalen, Landschaftsverbands Westfalen-Lippe (LWL) and **are copyright protected**
+### -> Images marked as LWL-Altertumskommission für Westfalen belong to the Altertumskommission für Westfalen, Landschaftsverbands Westfalen-Lippe (LWL) and **are copyright protected**
 
 ### -> all other images and 3D models : [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0//)
 
@@ -47,7 +47,7 @@ The changes are listed here:
 
 ## Hotspots
 
-- using the Hotspot feature from 3DHOP, the alert that will present you the information of the "Hotspot" is a simple JavaScript alert box, which displays a pop-up window. This window can show the message that is written into the JavaScript alert function, but you can't change the style, add images or other elements to the pop-up window. The solution was a JavaScript code which is connected to Bootstrap modals, which makes it possible to style and change the pop-up windows of the Hotspots depending on what you want your annotations to show. The idea of the code structure was taken from the user [Iro Boutsi](https://github.com/IroMp) and can be found here [here](https://github.com/IroMp/3dhop-threejs-demo/blob/master/js/hotspotsinfo.js). The code I wrote is not perfect, but it works, here is an example of the JavaScript file:
+- using the Hotspot feature from 3DHOP, the alert that will present you the information of the "Hotspot" is a simple JavaScript alert box, which displays a pop-up window. This window can show the message that is written into the JavaScript alert function, but you can't change the style, add images or other elements to the pop-up window. The solution was a JavaScript code which is connected to Bootstrap modals, which makes it possible to style and change the pop-up windows of the Hotspots depending on what you want your annotations to show. The idea of the code structure was taken from the user [Iro Boutsi](https://github.com/IroMp) and can be found [here](https://github.com/IroMp/3dhop-threejs-demo/blob/master/js/hotspotsinfo.js). The code I wrote is not perfect, but it works, here is an example of the JavaScript file:
 
 ```javascript
 function setInfo(hotspot){
