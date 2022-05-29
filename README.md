@@ -21,6 +21,8 @@ The megalithic passage grave Düwelsteene is one of the most southwestern graves
 
 In 1932 after excavations under archaeological and scientific supervision, the grave was restored to the appearence it was thought to have had, with the information that was available at the time. While moving the stones makes the passage grave look composed and gives visitors an idea how the grave could have looked, it also made it harder to digitally reconstruct the passage grave, because nowadays the megalithic stones cannot be found in their in situ placement.
 
+Idea for the reconstructions and base model by Leo Klinke.
+
 ---
 
 ## **Methods**
