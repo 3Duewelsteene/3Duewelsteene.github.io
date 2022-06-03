@@ -24,11 +24,25 @@ body {
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 390px) {
   .Nav-Title {
     font-size: large;
   }
 }
+
+@media (max-width: 350px) {
+  .Nav-Title {
+    font-size: small;
+  }
+}
+
+@media (max-width: 320px) {
+  .Nav-Title {
+    font-size: x-small;
+  }
+}
+
+
 
 
 /* FEEDBACK MODAL BACKGROUND */

@@ -28,8 +28,7 @@
 
   <!-- Bootstrap CSS v5.2 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-    crossorigin="anonymous">
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
 <body>
@@ -40,43 +39,44 @@
         <img src="./img/logo.png" alt="3Duewelsteene Logo" width="80" height="80"
           class="d-inline-block align-text-center" />
         <span class="Nav-Title">3Düwelsteene</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-            3Düwelsteene
-          </h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index_en.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about_en.html">About</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Reconstructions
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                <li><a class="dropdown-item" href="3D_Today_en.html">Today</a></li>
-                <li><a class="dropdown-item" href="3D_before1932_en.html">before 1932</a></li>
-                <li><a class="dropdown-item" href="3D_3000BC_en.html">around 3000 BC</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact_en.html">Feedback</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html"><img src="./img/DE.png" alt="deutsch" width="30" height="20" /></a>
-            </li>
-          </ul>
+      <div class="d-flex flex-row mb-3">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="nav-link ms-3 pt-2 " href="index.html"><img src="./img/DE.png"  alt="deutsch"
+          width="30" height="20" /></a>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              3Düwelsteene
+            </h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index_en.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about_en.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Reconstructions
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                  <li><a class="dropdown-item" href="3D_Today_en.html">Today</a></li>
+                  <li><a class="dropdown-item" href="3D_before1932_en.html">before 1932</a></li>
+                  <li><a class="dropdown-item" href="3D_3000BC_en.html">around 3000 BC</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact_en.html">Feedback</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -88,11 +88,13 @@
     <img class="img-fluid" src="img/logo.png" alt="website logo">
     <h1 class="display-4 fw-bold lh-1 mb-3">3Düwelsteene</h1>
     <div class="col-lg-6 mx-auto">
-      <h2 class="display-7 lh-1 m-3 p-3">The 3D reconstructions of the megalithic grave "Devil's Stones" near Heiden, Westphalia</h2>
+      <h2 class="display-7 lh-1 m-3 p-3">The 3D reconstructions of the megalithic grave "Devil's Stones" near Heiden,
+        Westphalia</h2>
       <br>
-        <div class="d-grid gap-1 d-md-block justify-content-md-start">
-          <button class="btn btn btn-outline-success btn-lg px-4 me-md-2" onclick="document.location='about_en.html'">History and information about the Düwelsteene</button>
-        </div>
+      <div class="d-grid gap-1 d-md-block justify-content-md-start">
+        <button class="btn btn btn-outline-success btn-lg px-4 me-md-2"
+          onclick="document.location='about_en.html'">History and information about the Düwelsteene</button>
+      </div>
     </div>
   </div>
 
@@ -104,15 +106,20 @@
           Reconstructions
         </h1>
         <p class="lead">
-          On this website it is possible to see the Düwelsteene as a 3D scan in the condition in which the 
-          megalithic tomb can be found today. The positioning of the stones of the grave can be seen as a 3D reconstruction as well, 
-          in the state they were presumably in before the restoration in 1932. 
-          Another virtual reconstruction shows the megalithic tomb of the Funnelbeaker culture as it might have looked like around 3000 BC.
+          On this website it is possible to see the Düwelsteene as a 3D scan in the condition in which the
+          megalithic tomb can be found today. The positioning of the stones of the grave can be seen as a 3D
+          reconstruction as well,
+          in the state they were presumably in before the restoration in 1932.
+          Another virtual reconstruction shows the megalithic tomb of the Funnelbeaker culture as it might have looked
+          like around 3000 BC.
         </p>
         <div class="d-grid gap-1 d-md-block justify-content-md-start">
-          <button class="btn btn-outline-secondary btn-lg px-4 m-3" onclick="document.location='3D_Today_en.html'">Today</button>
-          <button class="btn btn-outline-secondary btn-lg px-4 m-3" onclick="document.location='3D_before1932_en.html'">before 1932</button>
-          <button class="btn btn-outline-secondary btn-lg px-4 m-3" onclick="document.location='3D_3000BC_en.html'">around 3000 BC</button>
+          <button class="btn btn-outline-secondary btn-lg px-4 m-3"
+            onclick="document.location='3D_Today_en.html'">Today</button>
+          <button class="btn btn-outline-secondary btn-lg px-4 m-3"
+            onclick="document.location='3D_before1932_en.html'">before 1932</button>
+          <button class="btn btn-outline-secondary btn-lg px-4 m-3"
+            onclick="document.location='3D_3000BC_en.html'">around 3000 BC</button>
         </div>
       </div>
       <div class="col-12 col-sm-11 col-lg-6 overflow-hidden shadow-md">
@@ -130,8 +137,8 @@
             <div class="card-body">
               <h5 class="card-title">About</h5>
               <p class="card-text">
-                Directions to the megalithic tomb, information about the restoration of the tomb in 1932 and 
-                the current 3D reconstructions, information about the excavation history, as well as tales about 
+                Directions to the megalithic tomb, information about the restoration of the tomb in 1932 and
+                the current 3D reconstructions, information about the excavation history, as well as tales about
                 the origin of the megalithic tomb and the origin of the name Düwelsteene.
               </p>
               <a href="about_en.html" class="btn btn-primary">About</a>
@@ -141,9 +148,11 @@
             <div class="card-body">
               <h5 class="card-title">Feedback</h5>
               <p class="card-text">
-                This website visualizes the history of the Düwelsteene and is designed for the digital reconstructions 
-                of this megalithic tomb. Would you like to tell me your opinion about the website? Your feedback helps me 
-                to improve the website in form and content! To support you, I have provided a feedback form, which you are welcome to use. 
+                This website visualizes the history of the Düwelsteene and is designed for the digital reconstructions
+                of this megalithic tomb. Would you like to tell me your opinion about the website? Your feedback helps
+                me
+                to improve the website in form and content! To support you, I have provided a feedback form, which you
+                are welcome to use.
                 Thank you very much!
               </p>
               <a href="contact_en.html" class="btn btn-primary">Feedback</a>
@@ -177,9 +186,11 @@
 
       <ul class="nav col-md-4 justify-content-end">
         <li class="nav-item">
-          <a href="index_en.html" class="nav-link px-2 text-muted"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
-          </svg></a>
+          <a href="index_en.html" class="nav-link px-2 text-muted"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+              height="16" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+            </svg></a>
         </li>
         <li class="nav-item">
           <a href="privacy_en.html" class="nav-link px-2 text-muted"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
