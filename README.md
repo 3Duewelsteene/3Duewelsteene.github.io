@@ -17,11 +17,11 @@ with the help of [Bootstrap](https://getbootstrap.com/) and [3DHOP](https://gith
 
 ## **Context**
 
-The megalithic passage grave Düwelsteene is one of the most southwestern graves of the Funnelbeaker culture still in existance. Through ceramic finds and  radiocarbon dating of a skull fragment found in the grave, the utilization of the grave can be dated from 3300 BC to 2600 BC.
+The megalithic passage grave Düwelsteene is one of the most southwestern graves of the Funnel Beaker culture still in existance. Through ceramic finds and  radiocarbon dating of a skull fragment found in the grave, the utilization of the grave can be dated from 3300 BC to 2600 BC.
 
 In 1932 after excavations under archaeological and scientific supervision, the grave was restored to the appearence it was thought to have had, with the information that was available at the time. While moving the stones makes the passage grave look composed and gives visitors an idea how the grave could have looked, it also made it harder to digitally reconstruct the passage grave, because nowadays the megalithic stones cannot be found in their in situ placement.
 
-Idea for the reconstructions and base model by Leo Klinke.
+Model foundations and basic idea for the reconstructions by Leo Klinke. Groundwork and informations by Altertumskommission für Westfalen (LWL).
 
 ---
 
@@ -29,7 +29,7 @@ Idea for the reconstructions and base model by Leo Klinke.
 
 With new technology the appearance of the grave has now been send back trough time and is displayed as 3D models on the website. Through Structure from Motion (SfM) the passage grave was digitized and transformed to a 3D model. The SfM 3D model is visualized and shows the current appearence of the grave.
 
-Through a citizen science project and the help of the residents of Heiden and its surroundings, photographs could be collected of the Duewelsteene and the placement of the stones before the restoration in 1932. Using the SfM model, the megalithic stones were extracted and the holes in the mesh were closed using the Poisson Surface Reconstruction in the Software [CloudCompare](https://www.cloudcompare.org/). These individual stones were then placed in the 3D software [Blender](https://www.blender.org/) and with the help of the photographs, the megalithic stones could be "turned back" and a reconstruction of the passage grave before the restoration could be built.
+Through a citizen science project by the Altertumskommission für Westfalen and the help of the residents of Heiden and its surroundings, photographs could be collected of the Duewelsteene and the placement of the stones before the restoration in 1932. Using the SfM model, the megalithic stones were extracted and the holes in the mesh were closed using the Poisson Surface Reconstruction in the Software [CloudCompare](https://www.cloudcompare.org/). These individual stones were then placed in the 3D software [Blender](https://www.blender.org/) and with the help of the photographs, the megalithic stones could be "turned back" and a reconstruction of the passage grave before the restoration could be built.
 
 As a last 3D model the still existing megalithic stones from the 3D model of the passage grave were used to build a reconstruction that shows how the grave could have looked around 3000 BC. Through scientific research and comparisons to similar passage graves in [Germany](https://www.altertumskommission.lwl.org/de/forschung/megalithik/) and the [Netherlands](https://hunebeddeninfo.nl/), the 3D model was built in Blender. To differentiate the still existing stones from the added reconstructed objects, the added stones were built in low-poly style and have a visible wire frame overlay.
 
