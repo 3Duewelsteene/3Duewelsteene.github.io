@@ -23,6 +23,8 @@ In 1932 after excavations under archaeological and scientific supervision, the g
 
 Model foundations and basic idea for the reconstructions by Leo Klinke. Groundwork and informations by Altertumskommission für Westfalen (LWL).
 
+This website was built as a supplement for a master's thesis in [Archaeoinformatics](https://archaeologie.phil-fak.uni-koeln.de/en/institute/study-areas/archaeoinformatics) at the University of Cologne.
+
 ---
 
 ## **Methods**
