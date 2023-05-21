@@ -17,9 +17,9 @@ with the help of [Bootstrap](https://getbootstrap.com/) and [3DHOP](https://gith
 
 ## **Context**
 
-The megalithic passage grave Düwelsteene is one of the most southwestern graves of the Funnel Beaker culture still in existance. Through ceramic finds and  radiocarbon dating of a skull fragment found in the grave, the utilization of the grave can be dated from 3300 BC to 2600 BC.
+The megalithic passage grave Düwelsteene is one of the most southwestern graves of the Funnel Beaker culture still in existence. Through ceramic finds and  radiocarbon dating of a skull fragment found in the grave, the utilization of the grave can be dated from 3300 BC to 2600 BC.
 
-In 1932 after excavations under archaeological and scientific supervision, the grave was restored to the appearence it was thought to have had, with the information that was available at the time. While moving the stones makes the passage grave look composed and gives visitors an idea how the grave could have looked, it also made it harder to digitally reconstruct the passage grave, because nowadays the megalithic stones cannot be found in their in situ placement.
+In 1932 after excavations under archaeological and scientific supervision, the grave was restored to the appearance it was thought to have had, with the information that was available at the time. While moving the stones makes the passage grave look composed and gives visitors an idea how the grave could have looked, it also made it harder to digitally reconstruct the passage grave, because nowadays the megalithic stones cannot be found in their in situ placement.
 
 Model foundations and basic idea for the reconstructions by Leo Klinke. Groundwork and informations by Altertumskommission für Westfalen (LWL).
 
