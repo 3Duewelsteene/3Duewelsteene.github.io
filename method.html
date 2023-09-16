@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Workflow - 3Düwelsteene</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="icon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="stylesheet/custom.css" />
+
+    <!-- Bootstrap CSS v5.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- navigation-->
+    <nav class="navbar navbar-light bg-light py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="./img/logo.png" alt="3Duewelsteene Logo" width="80" height="80"
+                    class="d-inline-block align-text-center" />
+                <span class="Nav-Title">3Düwelsteene</span></a>
+            <div class="d-flex flex-row mb-3">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="nav-link ms-3 pt-2 " href="method_en.html"><img src="./img/UK.png" alt="english" width="30"
+                        height="20" /></a>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            3Düwelsteene
+                        </h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">3Düwelsteene</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">Geschichte</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="method.html">Methoden</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="" id="offcanvasNavbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Rekonstruktionen
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                    <li><a class="dropdown-item" href="3D_Today.html">Heute</a></li>
+                                    <li><a class="dropdown-item" href="3D_before1932.html">vor 1932</a></li>
+                                    <li><a class="dropdown-item" href="3D_3000BC.html">um 3000 BC</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Feedback</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/3Duewelsteene/3Duewelsteene.github.io"
+                                    target="_blank">GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content-->
+
+    <!-- header-->
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="./img/logo.png" alt="3Duewelsteene Logo" width="100" height="100">
+        <h1 class="display-5 fw-bold">Material und Methoden</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Eine ausführlichere Erklärung zu der Herkunft und Weiterverarbeitung der genutzten
+                Daten</p>
+        </div>
+    </div>
+
+
+    <!-- project section-->
+    <div class="position-relative overflow-hilien p-3 p-md-5 m-md-3 text-center">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-lg-6">
+                <h2 class="display-5 fw-light lh-1 mb-3">
+                    Die Digitalisierung des Megalithgrabes
+                </h2>
+                <p class="lead">
+                    Die Düwelsteene wurden im Zusammengenhang mit der Digitalisierung der Megalithgräber Westfalens im
+                    Megalithik Projekt der Altertumskommission des LWL mit Hilfe von Image-based Modeling als 3D Modell
+                    digitalisiert.
+                </p>
+            </div>
+            <div class="col-12 col-sm-11 col-lg-6 overflow-hilien shadow-md">
+                <img src="./img/1932to2017.jpg" class="img-fluid" alt="reconstruction difference 1932 to 2017" loading="lazy" />
+            </div>
+        </div>
+    </div>
+
+    <!-- accordion section-->
+    <div class="container">
+        <div class="container my-5">
+            <div class="accordion" id="accordionPanelsClose1">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panels-sfm">
+                        <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panels-collapseSfM" aria-expanded="false"
+                            aria-controls="panels-collapseSfM">
+                            Allgemeines zu Image-based Modeling und Structure from Motion
+                        </button>
+                    </h2>
+                    <div id="panels-collapseSfM" class="accordion-collapse collapse" aria-labelledby="panels-SfM"
+                        data-bs-parent="#accordionPanelsClose1">
+                        <div class="accordion-body">
+                            <div class="row flex-lg-row-reverse align-items-center">
+                                <div class="col-12 col-lg-12">
+                                    <p>
+                                        Image-based Modeling ermöglicht die dreidimensionale Darstellung von Objekten
+                                        aus vielen zweidimensionalen Bildern. Ein historischer Vorläufer dieses Ansatzes
+                                        ist die Stereoskopie, die seit 1838 räumliches Sehen in 2D-Bildern ermöglicht.
+                                        Hierbei werden zwei leicht unterschiedliche Bilder eines Objekts aus leicht
+                                        versetzten Perspektiven verwendet, um die räumliche Wahrnehmung zu simulieren.
+                                        <br>
+                                        Die Fotogrammetrie, insbesondere die 3D-Fotogrammetrie, baut auf dieser
+                                        Stereoskopie auf. Sie verwendet jedoch nicht nur zwei Bilder, sondern viele, um
+                                        präzise dreidimensionale Modelle zu erstellen. Durch die Kombination vieler
+                                        Bilder aus unterschiedlichen Perspektiven entstehen dichte Messpunktwolken, die
+                                        ein detailliertes 3D-Modell eines Objekts oder einer Landschaft ermöglichen.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-12">
+                                    <p>
+                                        In der Archäologie hat die 3D-Fotogrammetrie ebenfalls Anwendung gefunden.
+                                        Ein populärer Begriff für diesen Prozess ist
+                                        "Structure from Motion" (SfM). Dies ist ein Ansatz in der Computer Vision, bei
+                                        dem die 3D-Struktur einer Szene und die Kamerapositionen aus einer Bildsequenz
+                                        rekonstruiert werden, die aus unterschiedlichen Blickwinkeln aufgenommen wurde.
+                                        Der Schlüsselaspekt von SfM ist die Bewegung: Es wird die relative Bewegung
+                                        zwischen den Kamerapositionen genutzt, um Tiefeninformationen über die Szene zu
+                                        extrahieren (Nyimbili et al. 2016).
+                                        <br>
+                                        Zusammenfassend kann man sagen, dass Structure from Motion eine spezifische
+                                        Technik innerhalb des breiteren Feldes des Image-based Modeling ist. Während SfM
+                                        sich auf die Wiederherstellung von 3D-Strukturen aus der Bewegung konzentriert,
+                                        befasst sich IbM allgemeiner mit der Erstellung von 3D-Modellen aus Bildern,
+                                        wobei SfM einer von vielen möglichen Ansätzen ist (Doneaus et al. 2011).
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panels-Images">
+                        <button class="accordion-button collapsed  bg-light" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panels-collapseImages" aria-expanded="false"
+                            aria-controls="panels-collapseImages">
+                            Die fotografischen Aufnahmen der Düwelsteenen
+                        </button>
+                    </h2>
+                    <div id="panels-collapseImages" class="accordion-collapse collapse" aria-labelledby="panels-Images"
+                        data-bs-parent="#accordionPanelsClose1">
+                        <div class="accordion-body">
+                            <div class="row flex-lg-row-reverse align-items-center">
+                                <div class="col-12 col-lg-8">
+                                    <p>
+                                        Das 3D-Modell der Düwelsteene wurde erstellt, indem Fotos des megalithischen
+                                        Grabes aus jeder
+                                        möglichen Richtung und jedem Winkel aufgenommen wurden. Diese Fotografien wurden
+                                        zudem fotogrammetrisch entzerrt, um jegliche geometrische Verzerrung auf den
+                                        Bildern zu korrigieren (Klinke 2018). Für die Fotos der Düwelsteene wurde eine
+                                        Nikon-Digitalspiegelreflexkamera verwendet.
+                                        <br>
+                                        <br>
+                                        Da es sich um ein großes archäologisches Monument handelt und das Grab in einer
+                                        hohen Qualität digitalisiert werden sollte,
+                                        wurden nicht nur viele Bilder von dem Grab an sich gemacht, sondern es wurde
+                                        jeder einzelne Stein aus allen möglichen Positionen aufgenommen.
+                                        Somit wurden von dem Grab und von jedem einzelnen Megalithen
+                                        hunderte
+                                        von Bildern aufgenommen, wobei darauf geachtet wurde, dass die Bilder sich
+                                        überlappen. Dies ist notwendig, da aus diesen überlappenden Teilen der
+                                        Fotografien, die nebeneinander aufgenommen wurden, die Bilder zusammengeführt
+                                        werden
+                                        können und charakteristische Strukturen erkannt werden, was zu einer
+                                        pixelgenauen Struktur führt.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <img src="./img/SfMSloopsteene_Klinke.png" class="d-block mx-lg-auto img-fluid"
+                                        alt="Structure from Motion of the Große Sloopsteene" loading="lazy" width="500" height="200" />
+                                    <p class="text-muted">Structure from Motion bei der Digitalisierung der Großen
+                                        Sloopsteene (LWL-Altertumskommission für Westfalen/Klinke)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panels-Creation">
+                        <button class="accordion-button collapsed  bg-light" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panels-collapseCreation" aria-expanded="false"
+                            aria-controls="panels-collapseCreation">
+                            Das Erstellen des 3D Modells
+                        </button>
+                    </h2>
+                    <div id="panels-collapseCreation" class="accordion-collapse collapse"
+                        aria-labelledby="panels-Creation" data-bs-parent="#accordionPanelsClose1">
+                        <div class="accordion-body">
+                            <div class="row flex-lg-row align-items-center">
+                                <div class="col-12 col-lg-12">
+                                    <p>
+                                        Die Fotogrammetrie-Software, in diesem Fall Agisoft Metashape, ermöglicht es,
+                                        Aufnahmepositionen und Objektstrukturen durch die Analyse optischer
+                                        Verschiebungen, wie beispielsweise von Kanten, Frakturflächen oder Risslinien,
+                                        anhand der verglichenen, eingefügten Fotografien zu bestimmen. Nach der
+                                        Verarbeitung visualisieren sich die initialen Berechnungsergebnisse in Form
+                                        einer rudimentären Punktwolke, technisch als "Sparse Cloud" bezeichnet.
+                                        <br>
+                                        <br>
+                                        Ein weiterführender algorithmischer Schritt transformiert diese Sparse Cloud in
+                                        eine dichtere Punktwolke, die "Dense Cloud". Während dieser Berechnung werden
+                                        alle Einzelbilder einer Tiefenfilterung unterzogen, um zusätzliche Messpunkte
+                                        zwischen den bestehenden der Sparse Cloud einzufügen. Dies basiert nicht
+                                        lediglich auf einer einfachen Interpolation, sondern beinhaltet die
+                                        Berücksichtigung von Reliefveränderungen zwischen den Messpunkten der Sparse
+                                        Cloud, um eine gesteigerte Genauigkeit zu gewährleisten. Die resultierenden
+                                        Dense Clouds reflektieren den aktuellen Stand maximaler Vermessungsgenauigkeit
+                                        und sind vergleichbar mit den Datenresultaten terrestrischer Laserscanner. Ein
+                                        Vorteil hierbei ist, dass jeder Messpunkt in der Dense Cloud bereits über einen
+                                        Farbwert verfügt, im Gegensatz zu Laserscans, die eine zusätzliche
+                                        Farbinformation durch ergänzende Fotografien benötigen.
+                                        <br>
+                                        <br>
+                                        Im anschließenden Prozessschritt werden die fotogrammetrisch ermittelten
+                                        Messpunkte trianguliert. Bei dieser Prozedur werden stets drei Messpunkte
+                                        miteinander verbunden, wodurch Dreiecksflächen generiert werden. Üblicherweise
+                                        werden hierbei die räumlich am nächsten zueinander liegenden Punkte verwendet,
+                                        um optimale Genauigkeit sicherzustellen. Die resultierenden Dreiecksflächen sind
+                                        für weitere Triangulationen modifizierbar, was primär dazu dient, Lücken in den
+                                        Punktwolken zu schließen. Diese Triangulationsprozedur resultiert in einem
+                                        sogenannten "Mesh"-Modell mit dem visuellen Charakter eines dreidimensionalen
+                                        Drahtnetzmodells.
+                                        <br>
+                                        <br>
+                                        In einem finalen Rechenschritt wird eine Textur, ähnlich einer Überzugshaut,
+                                        über das Mesh-Modell appliziert. Dies verleiht dem 3D-Modell sein
+                                        fotorealistisches Erscheinungsbild. Die zugrundeliegende Textur stammt aus den
+                                        fotogrammetrisch korrigierten Einzelfotografien des initialen
+                                        Verarbeitungsschrittes. Im Gegensatz zu reinen Formdaten, die ausschließlich die
+                                        Morphologie und das Relief repräsentieren, integriert diese Textur zusätzliche
+                                        visuelle Informationen wie Farbnuancen, Lichtreflexe und Schattenverläufe, die
+                                        während der Dokumentationsphase festgehalten wurden.
+                                    </p>
+                                </div>
+                                <div class="row flex-lg-row-reverse align-items-center">
+                                    <div class="col-12 col-lg-4">
+                                        <img src="./img/HighPolyMesh.png" class="d-block mx-lg-auto img-fluid"
+                                            alt="3D Mesh der digitalen Düwelsteene" loading="lazy" width="500"
+                                            height="200" />
+                                        <p class="text-muted">3D Mesh der Düwelsteene</p>
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <p>
+                                            Der Arbeitsablauf zur Digitalisierung des megalithischen Grabes wurde von
+                                            der Altertumskommission für Westfalen bei allen bisher digitalisierten
+                                            megalithischen Gräbern, wie beispielsweise den Großen Sloopsteene,
+                                            angewendet. Jede Einheit (ein einzelner Megalith oder eine kleine Gruppe von
+                                            Megalithen,
+                                            die direkt nebeneinander liegen) wird fotografiert. Diese einzelnen
+                                            Einheiten
+                                            werden dann separat in die Computersoftware Agisoft Metashape eingegeben,
+                                            und in
+                                            eine grobe 3D-Punktwolke umgewandelt.
+                                            Nachdem eine Einheit digitalisiert und in eine grobe Punktwolke umgewandelt
+                                            wurde, wird die nächste Einheit (der nächste benachbarte Megalith) der
+                                            Software hinzugefügt. Mit jedem hinzugefügten Megalithen wird das gesamte
+                                            megalithische Grab nach und nach in eine Punktwolke umgewandelt (Klinke
+                                            2021).
+                                            <br>
+                                            <br>
+                                            Nachdem die komplette grobe Punktwolke erstellt wurde, wird Metashape
+                                            verwendet, um eine dichte
+                                            Punktwolke zu berechnen und zu erstellen, die dann in ein 3D-Gitternetz mit
+                                            einer
+                                            hinzugefügten fotorealistischen Textur umgewandelt wird.
+                                            <br>
+                                            Die Punktwolke der Düwelsteene
+                                            besteht aus über 378 Millionen Messpunkten. Mit diesem hochwertigen und
+                                            hochauflösenden 3D-Modell werden die Düwelsteene in einer Qualität
+                                            digitalisiert, die bei der Denkmalpflege helfen und jegliche Bewegung oder
+                                            minimale Zerstörung des megalithischen Grabes in der Zukunft
+                                            veranschaulichen kann, da es präzise durch bildbasiertes Modellieren
+                                            gemessen wurde.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panels-Sources1">
+                        <button class="accordion-button collapsed  bg-light" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panels-collapseSources1" aria-expanded="false"
+                            aria-controls="panels-collapseSources1">
+                            Quellen und weiterführende Literatur
+                        </button>
+                    </h2>
+                    <div id="panels-collapseSources1" class="accordion-collapse collapse"
+                        aria-labelledby="panels-Sources1" data-bs-parent="#accordionPanelsClose1">
+                        <div class="accordion-body">
+                            <div class="row flex-lg-row">
+                                <div class="col-12 col-lg-12">
+                                    <p>
+                                    <dl>
+                                        <dt>Megalithik in Westfalen:</dt>
+                                        <li> Klinke, L. (2018). Virtuelle Rekonstruktion – Bürgerwissenschaft
+                                            unterstützt Megalithforschung. In: Schierhold, K., Stapel, B., Die
+                                            Düwelsteene bei Heiden, Kreis Borken. Megalithgräber in Westfalen 3,
+                                            Münster. p. 14-17.</li>
+                                        <br>
+                                        <li> Klinke, L. (2021). Virtuelle Massen-Bewegung. Die digitale
+                                            3-D-Rekonstruktion des Megalithgrabes Große Sloopsteene bei Lotte-Wersen,
+                                            Kreis Steinfurt. In: Rind, M. M., Münz-Vierboom, B., Lehmann, U. (eds.),
+                                            Ausgrabungen und Funde in Westfalen-Lippe 15, 2020/2021, LWL-Archäologie für
+                                            Westfalen, p. 257-326.</li>
+                                        <br>
+                                        <li> Schierhold, K., Stapel, B. (2018). Die Düwelsteene bei Heiden, Kreis
+                                            Borken, Megalithgräber in Westfalen. Altertumskommission für Westfalen,
+                                            Münster.</li>
+                                        <br>
+                                        <li> Stapel, B., Schierhold, K. (2018). Das Großsteingrab von Lengerich-Wechte,
+                                            Kreis Steinfurt. Altertumskommission für Westfalen, Münster.</li>
+                                        <br>
+                                        <li> Sprockhoff, E. (1975). Atlas der Megalithgräber Deutschlands. Teil 3:
+                                            Niedersachsen – Westfalen. Bonn: R. Habelt.</li>
+                                        <br>
+                                        <li> Stieren, A. (1929). Bodenaltertümer Westfalens. Ein Bericht über Grabungen
+                                            und Funde für die Jahre 1925 bis 1928. Münster: Westfälische
+                                            Vereinsdruckerei.</li>
+                                        <br>
+                                        <li> Stieren, A. (1931). Bodenaltertümer Westfalens, 2. Bericht der
+                                            vorgeschichtlichen Abteilung des Landesmuseums. Westfalen. Mitteilungen
+                                            des Landesmuseums der Provinz Westfalen und des Vereins für Geschichte und
+                                            Altertumskunde Westfalens Heft 6. Dortmund: Verlag Dr. Theodor Rensing.</li>
+                                        <br>
+                                        <dt>Image-based Modelling:</dt>
+                                        <li> Carrivick, J. L., Smith, M. W., and Quincey, D. J. (2016). Structure from
+                                            Motion in the Geosciences. Chichester: Wiley Blackwell.</li>
+                                        <br>
+                                        <li> Doneus, M., Verhoeven, G., Fera, M., Briese, Chr., Kucera, M. and
+                                            Neubauer, W. (2011). From Deposit to Point Cloud. A Study of Low-Cost
+                                            Somputer Vision Approaches for the Straightforward Documentation of
+                                            Archaeological Excavations, Geoinformatics FCE CTU 6, 81-88.</li>
+                                        <br>
+                                        <li> Kersten, T., Mechelke, K., Maziull, L. (2015) 3D Model of Al Zubarah
+                                            Fortress in Qatar. Terrestrial Laser Scanning vs. Dense Image Matching. Int.
+                                            Arch. Photogramm. Remote Sens. Spatial Inf. Sci. XL-5/W4, 1–8.</li>
+                                        <br>
+                                        <li> Lowe, D. G. (2004). Distinctive Image Features from Scale-Invariant
+                                            Keypoints. International Journal of Computer Vision 60,2:91-110,
+                                            https://doi.org/10.1023/B:VISI.0000029664.99615.94 .</li>
+                                        <br>
+                                        <li> Nyimbili, P.H., Demirel, H., Seker, D.Z., Erden, T. (2016). Structure from
+                                            Motion (SfM) - Approaches and Applications, in: Spatial Data Processing,
+                                            Modelling, Analysing and Management for Knowledge Based Systems. Presented
+                                            at the International Scientific Conference on Applied Sciences 27.-30.
+                                            September 2016, Antalya/Turkey.</li>
+                                        <br>
+                                        <li> Powlesland, D. (2016). 3Di - Enhancing the Record, Extending the Returns,
+                                            3D Imaging from Free Range Photography and Its Application during
+                                            Excavation. In: Kamermans, H., de Neef, W., Piccoli, C., Posluschny, A. G.,
+                                            Scopigno, R. The Three Dimensions of Archaeology (Proceedings of the
+                                            XVII UISPP world congress, 1–7 September 2014, Burgos, Spain), 7.
+                                            Archaeopress, Oxford. p. 13–32.</li>
+                                        <br>
+                                        <li> Reinhard, J. (2016). Structure-from-Motion-Photogrammetrie mit Agisoft
+                                            PhotoScan.
+                                            Erste Erfahrungen aus der Grabungs- praxis. In: U. Lieberwirth/I. Herzog
+                                            (Hrsg.), 3D-Anwendungen in der Archäologie. Computeranwendungen und
+                                            quantitative Methoden in der Archäologie. Workshop der AG CAA und des
+                                            Exzellenzclusters Topoi 2013. Berlin Studies of the Ancient World 34 (Berlin
+                                            2016) 17–44.</li>
+                                        <br>
+                                        <li> Verhoeven, G. et al. (2013) Undistorting the Past. New Technologies for
+                                            Orthorectification of Archaeological Areal Frame Imagery. In: C. Corsi/B.
+                                            Slapšak/F. Vermeulen (Hrsg.), Good Practice in Archaeological Diagnostics.
+                                            Non-invasive Survey of Complex Archaeological Sites, Heidelberg, 31–68.</li>
+                                    </dl>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- project section-->
+        <div class="position-relative overflow-hilien p-3 p-md-5 m-md-3 text-center">
+            <div class="row flex-lg-row align-items-center g-5 py-5">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-light lh-1 mb-3">
+                        Recherche und Rekonstruktion
+                    </h2>
+                    <p class="lead">
+                        Neben Beschreibungen und Zeichnungen in archäologischen Veröffentlichungen, dienten für die
+                        Rekonstruktion der Düwelsteene vor allem ähnliche Megalithgräber in Westfalen und auch in den
+                        Niederlanden.
+                    </p>
+                </div>
+                <div class="col-12 col-sm-11 col-lg-6 overflow-hilien shadow-md">
+                    <img src="./img/Reconstruction3000BC_Blender.jpg" class="img-fluid" alt="reconstruction 3000 BC"
+                        loading="lazy" />
+                </div>
+            </div>
+        </div>
+
+        <!-- accordion section-->
+        <div class="container">
+            <div class="container my-5">
+                <div class="accordion" id="accordionPanelsClose2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panels-Similar">
+                            <button class="accordion-button collapsed  bg-light" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panels-collapseSimilar" aria-expanded="false"
+                                aria-controls="panels-collapseSimilar">
+                                Vergleichbare Megalithgräber
+                            </button>
+                        </h2>
+                        <div id="panels-collapseSimilar" class="accordion-collapse collapse"
+                            aria-labelledby="panels-Similar" data-bs-parent="#accordionPanelsClose2">
+                            <div class="accordion-body">
+                                <div class="row flex-lg-row-reverse align-items-center">
+                                    <div class="col-12 col-lg-12">
+                                        <p>
+                                            Die Großen Sloopsteene, im Kreis Steinfurt in der Nähe von Lotte-Wersen
+                                            gelegen, sind eines der am besten erhaltenen Megalithgräber Westfalens.
+                                            Dieses Großsteingrab wurde im Gegensatz zu den Düwelsteenen und anderen
+                                            Großsteingräbern in Westfalen nicht restauriert.
+                                            Daher liegen einige der Megalithen noch in situ. Allerdings gab es bei den
+                                            Großen Sloopsteenen auch Eingriffe durch den Menschen, so Besipielsweise
+                                            eine Graböffnung im Jahr 1807.
+                                            Die Großen Sloopsteene und auch die Rekonstruktion dieses Megalithgrabes
+                                            (Klinke 2021) dienten als eines der Beispiele für dei Rekonstruktion der
+                                            Düwelsteene.
+                                            <br>
+                                            <br>
+                                            Eine weitere Grundlage für die Rekonstruktion der Düwelsteene um 3000 v.
+                                            Chr. waren die Megalithgräber der Trichterbecherkultur in der
+                                            niederländischen Region Drenthe.
+                                            Diese Gräber wurden schon 1660 durch Johan Picardt erwähnt und wurden
+                                            teilweise seit dem 19. Jahrhundert schon restauriert. Viele dieser
+                                            Restaurierungen wurden durch Albert Egges van Giffen nach gründlichen aber
+                                            auch gut dokumentierten Ausgrabungen durchgeführt.
+                                            Die Dokumente der Asugrabungen, aber auch Fotografien der Megalithgräber in
+                                            Drenthe vor ihrer Restaurierung dienten als Beispiel für die Rekonstruktion
+                                            der Düwelsteene.
+                                            Vor allem da dieses Grab ähnlich wie die Megalithgräber in der Region
+                                            Drenthe auch Anfang des 20. Jahrhunderts restauriert und somit verändert
+                                            wurde.
+                                            Die Informationen zu den Megalithgräbern in der Region Drenthe sind alle auf
+                                            der Webseite <a href="https://hunebeddeninfo.nl/"
+                                                target="_blank">hunebeddeninfo</a> gesammelt
+                                            dort sind zu jedem einzelnen Grab Infornationen, 3D Modelle sowie die
+                                            Fotografien und Grundrisse von Albert Egges van Giffen zu finden.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panels-Literature">
+                            <button class="accordion-button collapsed  bg-light" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panels-collapseLiterature" aria-expanded="false"
+                                aria-controls="panels-collapseLiterature">
+                                Klassifizierung der einzelnen Megalithen der Düwelsteene
+                            </button>
+                        </h2>
+                        <div id="panels-collapseLiterature" class="accordion-collapse collapse"
+                            aria-labelledby="panels-Literature" data-bs-parent="#accordionPanelsClose2">
+                            <div class="accordion-body">
+                                <div class="row flex-lg-row-reverse align-items-center">
+                                    <div class="col-12 col-lg-8">
+                                        <p>
+                                            Zusammen mit Mitarbeitern aus dem Megalith-Projekt der Altertumskommission
+                                            für Westfalen wurde jeder Megalith der Düwelsteene nach Größe, Volumen und
+                                            Platzierung klassifiziert. Die Kategorien waren Deckstein, Orthostat
+                                            (Stützstein) und Keilstein. Andere Kategorien wären Umfassungsstein und
+                                            Bodenmaterial aus dem inneren des Grabes, aber diese Bausteine von
+                                            megalithischen Gräbern wurden bei
+                                            den Düwelsteene nicht gefunden oder konnten nicht mit Sicherheit
+                                            identifiziert werden. Jedem Megalith wurde durch den
+                                            Digitalisierungsprozess eine Nummer zugewiesen und die Nummerierung folgte
+                                            dem Megalithgrabe im Uhrzeigersinn. Mit diesen
+                                            festgelegten Nummern konnte jeder einzelne Megalith individuell ausgewählt
+                                            und
+                                            klassifiziert werden, sowohl basierend auf seinen eigenen besonderen
+                                            Merkmalen als auch darauf, wie seine Platzierung die Gesamtstruktur des
+                                            megalithischen Grabes beeinflusste.
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-lg-4">
+                                        <img src="./img/ClassificationMegaliths.png"
+                                            class="d-block mx-lg-auto img-fluid" alt="Numbering of the megaliths"
+                                            loading="lazy" width="500" height="200" />
+                                        <p class="text-muted">Nummerierung der Megalithen
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-lg-12">
+                                        <p>
+                                            Um das Volumen und anschließend das Gewicht der Megalithen zu berechnen,
+                                            wurde die 3D-Modellierungssoftware Blender mit dem add-on 3D-Print Toolbox
+                                            verwendet. Jeder Stein wurde als separates Objekt ausgewählt und
+                                            das Volumen wurde in Blender durch das add-on berechnet. Nach der
+                                            Volumenberechnung wurde das Gewicht jedes Megalithen ermittelt. Das Gewicht
+                                            von Granit hängt von seiner Dichte ab. Die zur Berechnung des Gewichts
+                                            verwendete Formel war das Volumen in Kubikmeter (m3) multipliziert mit 2700 kg, da Granit
+                                            etwa 2,7 Tonnen pro Kubikmeter wiegt.
+                                            Fast alle Megalithen der Düwelsteene sind nur teilweise sichtbar und aus
+                                            diesem Grund konnten nur
+                                            diese partiellen 3D-Modelle zur Berechnung von Volumen und Gewicht
+                                            herangezogen werden.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row flex-lg-row align-items-center">
+                                    <div class="col-12 col-lg-12">
+                                        <img src="./img/WeightMegaliths.png" class="d-block mx-lg-auto img-fluid"
+                                            alt="Classification of the Düwelsteen megaliths" loading="lazy" width="800"
+                                            height="200" />
+                                        <p class="text-muted text-center">Klassifizierung der Megalithen der Düwelsteene</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panels-Basis">
+                            <button class="accordion-button collapsed  bg-light" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panels-collapseBasis" aria-expanded="false"
+                                aria-controls="panels-collapseBasis">
+                                Die 3D Rekonstruktion der Düwelsteene
+                            </button>
+                        </h2>
+                        <div id="panels-collapseBasis" class="accordion-collapse collapse"
+                            aria-labelledby="panels-Basis" data-bs-parent="#accordionPanelsClose2">
+                            <div class="accordion-body">
+                                <div class="row flex-lg-row align-items-center">
+                                    <div class="col-12 col-lg-12">
+                                        <p>
+                                            Um die digitale Rekonstruktion der Düwelsteene um 3000 v. Chr. zu erstellen,
+                                            wurde die vorherige Rekonstruktion von vor 1932 verwendet, da die Anordnung
+                                            der Megalithen eine bessere Vorlage dafür bietet, wie das megalithische Grab
+                                            gebaut worden sein könnte, als die aktuelle Grabstruktur. Viele der
+                                            Megalithen schienen auf den Fotos aus dem Citizen-Science-Projekt noch in
+                                            situ zu sein und mussten nur aufgerichtet oder leicht gedreht werden, um
+                                            eine einigermaßen gleichmäßige Kammerwand zu bilden. Die Orthostaten der
+                                            Düwelsteene wurden verschoben und passend zum Stil der megalithischen Gräber
+                                            angeordnet, die in der Nähe gefunden wurden oder ähnlich gebaut wurden. Eine
+                                            gängige Struktur von megalithischen Gräbern, die zur Trichterbecherkultur
+                                            gehören, insbesondere zur Westgruppe, besteht aus zwei Orthostaten auf
+                                            gegenüberliegenden Seiten, wobei der flache Teil des Megalithen einander
+                                            zugewandt ist. Auf diese beiden Seitensteine wurde ein Deckstein gelegt, der
+                                            zusammen ein Joch bildet (Bakker 2010). Ähnlich wie beim Großen
+                                            Sloopsteene wurde jeder der Stützsteine der Düwelsteene platziert, um eine
+                                            gleichmäßige Kammer des Grabes zu bilden, ohne die Position oder Drehung
+                                            jedes Megalithen stark zu verändern. Dies führte zu zwei parallelen Reihen
+                                            von Orthostaten mit jeweils zwei Endsteinen an jedem Ende der Kammer im
+                                            Südwesten und Nordosten.
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-lg-4">
+                                        <img src="./img/ReconstructedMegaliths.png" class="d-block mx-lg-auto img-fluid"
+                                            alt="Abstract reconstructed megaliths" loading="lazy" width="500" height="200" />
+                                        <p class="text-muted">Abstrakt rekonstruierte Megalithen
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <p>
+                                            Um eine Rekonstruktion zu
+                                            erstellen, wie die Düwelsteene um 3000 v. Chr. gebaut und ausgesehen haben
+                                            könnten, mussten fehlende Steine hinzugefügt werden. Diese Steinersatzteile
+                                            wurden absichtlich abstrakt gestaltet, um die verschiedenen Teile der
+                                            megalithischen Grabrekonstruktion sichtbar zu machen: a) die Megalithen, die
+                                            heute noch existieren und b) die Steine, die für die Rekonstruktion
+                                            hinzugefügt wurden. Ein grundlegender Orthostat wurde in der
+                                            3D-Modellierungssoftware Blender modelliert, mit einer flachen Innenseite,
+                                            einer konvexen Außenseite und einer insgesamt ovalen Form des Ersatzsteins.
+                                            Aus dieser Grundform des Orthostaten wurde der Deckstein ähnlich modelliert,
+                                            er unterscheidet sich nur in der Größe. Weitere modellierte Ersatzsteine
+                                            waren die Megalithen, die die äußere Grenze bildeten, die Keilsteine und die
+                                            Steine, die die Zwickelwand zwischen den Orthostaten und den
+                                            Einfassungssteinen bildeten. Die Megalithen, die die äußere Grenze bildeten,
+                                            wurden nach den Orthostaten modelliert, aber in der Größe reduziert. Die
+                                            anderen Ersatzsteine waren abstrakte Versionen von flachen Steinen, die dann
+                                            modelliert wurden, um eine Zwickelwand zu bilden. Diese verschiedenen
+                                            Steinformen bilden die Grundstruktur eines Ganggrabes (Ickerodt 2020).
+                                        </p>
+                                    </div>
+
+                                    <div class="col-12 col-lg-12">
+                                        <p>
+                                            Mit allen Bausteinen für die Rekonstruktion der Düwelsteene um 3000 v. Chr.
+                                            modelliert, war der erste Schritt, die Decksteine auf die gerichteten
+                                            Orthostaten zu setzen. Da alle drei Decksteine, die heute noch existieren,
+                                            von ihren Stützsteinen gerutscht sind, musste die wahrscheinlichste
+                                            Positionierung gefunden werden. Da diese Megalithen nur virtuelle Modelle
+                                            sind, konnte getestet werden, in welcher Position und auf welchen
+                                            Orthostaten die Decksteine am wahrscheinlichsten platziert wurden. Nachdem
+                                            alle Megalithen, die heute noch sichtbar sind, in der Rekonstruktion
+                                            positioniert waren, wurden die als Ersatz modellierten Steine hinzugefügt.
+                                            Zuerst wurden die fehlenden unteren Teile der Orthostaten in der
+                                            Rekonstruktion platziert, dann das Fundament der Orthostaten, das aus
+                                            kleineren Steinfragmenten bestand, die dazu dienten, die Orthostaten durch
+                                            Verkeilen der kleineren Steinfragmente darunter zu fixieren. Eine Schicht
+                                            flacher Steinfragmente wurde verlegt, um den Boden des megalithischen Grabes
+                                            zu bilden. Zwischen den Stützseitensteinen wurde die Zwickelmauer
+                                            hinzugefügt. Schließlich wurden die fehlenden Decksteine auf das
+                                            rekonstruierte Grab gesetzt. Die Gesamtstruktur der rekonstruierten
+                                            Düwelsteene basierte auf der Architektur ähnlicher megalithischer Gräber wie
+                                            dem Großen Sloopsteene (Klinke 2021) oder den megalithischen
+                                            Strukturen in den Niederlanden.
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-lg-12">
+                                        <p>
+                                            Im Rekonstruktionsmodell wurden auch die äußere Grenze, bestehend aus
+                                            kleineren Ersatzmegalithen, und die Zwickelmauern hinzugefügt. Die
+                                            Platzierung war problematisch, da es keine Anhaltspunkte für eine äußere
+                                            Steinbegrenzung gibt, die die Struktur des Hügels über dem Grab definierte.
+                                            Obwohl es keine Quellen für einen Hügel gibt, der die Düwelsteene bedeckt,
+                                            ist es wahrscheinlich, dass das Grab ähnlich dem Großen Sloopsteene und dem
+                                            megalithischen Grab von Rheine64, das noch von einem Hügel bedeckt gefunden
+                                            wurde, abgedeckt war. Mit diesen Vergleichen im Hinterkopf wurde die
+                                            Rekonstruktion der Düwelsteene mit einem den Grab bedeckenden Hügel
+                                            modelliert. Mit der Entscheidung, einen Hügel hinzuzufügen, mussten die
+                                            Steilheit und die Abmessungen des Hügels definiert werden. Im idealisierten
+                                            Plan der Düwelsteene von 1932 sind Steine eingezeichnet, die den äußeren
+                                            Megalithenring anzeigen könnten.
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-lg-8">
+                                        <p>
+                                            Bei der Modellierung dieser Grenze wurde
+                                            deutlich, dass der Radius, den diese gezeichneten Steine zeigten, fast ein
+                                            Kreis war und zu weit von den langen Seiten des megalithischen Grabes
+                                            entfernt lag. Die meisten der verglichenen megalithischen Strukturen hatten
+                                            höchstens zwei Paare von Jochen, die den Eingang des Grabes bildeten. Mit
+                                            dem Radius der äußeren Grenze, den der gezeichnete Plan zeigte, wäre der
+                                            Eingang zu den Düwelsteene übermäßig lang gewesen. Die meisten
+                                            megalithischen Strukturen der Westgruppe in der Trichterbecherkultur hatten
+                                            eine ovale Grenze, die an den längeren Teilen der Grabstruktur etwas flach
+                                            war. Das Rekonstruktionsmodell des Hügels wurde reduziert, um den
+                                            verglichenen megalithischen Gräbern zu ähneln. Der Hügel des rekonstruierten
+                                            Modells wurde mit dem Rutschwinkel für Sand im Hinterkopf erstellt. Die
+                                            Bodenzusammensetzung des Gebiets, in dem die Düwelsteene gefunden werden,
+                                            ist erheblich sandig, daher wurde der Rutschwinkel für den Hügel als 30°
+                                            Grad definiert (Klinke 2021). Mit diesen Definitionen wurde ein Hügel
+                                            auf dem megalithischen Grab modelliert, wobei die äußeren Megalithen und die
+                                            Zwickelmauerung als Grenze des Hügels fungierten.
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-lg-4">
+                                        <img src="./img/RadiusReconstruction.png" class="d-block mx-lg-auto img-fluid"
+                                            alt="Boundary of the reconstructed burial chamber" loading="lazy" width="500" height="200" />
+                                        <p class="text-muted">Begrenzung des rekonstruierten Grabhügels</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panels-Research">
+                            <button class="accordion-button collapsed  bg-light" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panels-collapseResearch" aria-expanded="false"
+                                aria-controls="panels-collapseResearch">
+                                Quellen und weiterführende Literatur
+                            </button>
+                        </h2>
+                        <div id="panels-collapseResearch" class="accordion-collapse collapse"
+                            aria-labelledby="panels-Research" data-bs-parent="#accordionPanelsClose2">
+                            <div class="accordion-body">
+                                <div class="row flex-lg-row align-items-center">
+                                    <div class="col-12 col-lg-12">
+                                        <p>
+                                        <dl>
+                                            <dt>Megalithgräber</dt>
+                                            <li> Bakker, J. A. (2010). Megalithic research in the Netherlands: 1547 -
+                                                1911 ; from "Giant's Beds" and "Pillars of Hercules" to accurate
+                                                investigations, Leiden: Sidestone Press.</li>
+                                            <br>
+                                            <li> Bartling, G. (1978). Das Steinkammergrab in Werste II.
+                                                Wiederentdeckung, Sicherstellung und Wiederaufbau des verlorenen
+                                                Kulturdenkmals. In: Beiträge zur Heimatkunde der Städte Löhne und Bad
+                                                Oeynhausen 5.</li>
+                                            <br>
+                                            <li> Fansa, M. (1992). Großsteingräber zwischen Weser und Ems. Oldenburg:
+                                                Isensee.</li>
+                                            <br>
+                                            <li> Ickerodt, U.F. (2020). Kulturbruch: Megalithen und Erinnerung,
+                                                Sonderheft der Archäologischen Nachrichten aus Schleswig-Holstein.
+                                                Archäologisches Landesamt Schleswig-Holstein, Schleswig.</li>
+                                            <br>
+                                            <li> Jaždžewski, K. (1932). Zusammenfassender Überblick über die
+                                                Trichterbecherkultur. Praehistorische Zeitschrift 23.
+                                                https://doi.org/10.1515/prhz.1932.23.1-2.77</li>
+                                            <br>
+                                            <li> Klinke, L. (2021). Virtuelle Massen-Bewegung. Die digitale
+                                                3-D-Rekonstruktion des Megalithgrabes Große Sloopsteene bei
+                                                Lotte-Wersen,
+                                                Kreis Steinfurt. In: Rind, M. M., Münz-Vierboom, B., Lehmann, U.
+                                                (eds.),
+                                                Ausgrabungen und Funde in Westfalen-Lippe 15, 2020/2021, LWL-Archäologie
+                                                für
+                                                Westfalen, p. 257-326.</li>
+                                            <br>
+                                            <li> Mennenga, M. (2017). Zwischen Elbe und Ems: die Siedlungen der
+                                                Trichterbecherkultur in Nordwestdeutschland. In: Frühe Monumentalität
+                                                und soziale Differenzierung Band 13. Bonn: Verlag Dr. Rudolf Habelt
+                                                GmbH.</li>
+                                            <br>
+                                            <li> Schuldt, E. (1972). Die mecklenburgischen Megalithgräber.
+                                                Untersuchungen zu ihrer Architektur und Funktion. Beiträge zur Ur-und
+                                                Frühgeschichte der Bezirke Rostock, Schwerin und Neubrandenburg, 6.
+                                                Berlin: Deutscher Verlag der Wissenschaft.</li>
+                                            <br>
+                                            <dt>Virtuelle Rekonstruktion</dt>
+                                            <li> Brunke, L. (2017). Uncertainty in archaeological 3D reconstructions.
+                                                University of Leiden, Faculty of Archaeology, supervisor: Karsten
+                                                Lambers. https://studenttheses.uni- versiteitleiden.nl/handle/1887/59548
+                                            </li>
+                                            <br>
+                                            <li> Cianci, M.G., Molinari, M. (2021). Methods of digitization of cultural
+                                                heritage. The case study of the Terme di Diocleziano. The International
+                                                Archives of the Photogrammetry, Remote Sensing and Spatial Information
+                                                Sciences.</li>
+                                            <br>
+                                            <li> Denard, H. (ed.) (2009). London Charter. For the Computer-based
+                                                Visualisation of Cultural Heritage. Draft 2.1., London.</li>
+                                            <br>
+                                            <li> Forte, M., Renfrew, C., Anconetani, P. (ed.) (1997). Virtual
+                                                archaeology: great discoveries brought to life through virtual reality.
+                                                Thames and Hudson, London.</li>
+                                            <br>
+                                            <li> Hageneuer, S. (2020). The Challenges of Archaeological Reconstruction:
+                                                Back Then, Now and Tomorrow. In: Hageneuer, S. (ed.) Communicating the
+                                                Past in the Digital Age: Proceedings of the International Conference on
+                                                Digital Methods in Teaching and Learning in Archaeology (12–13 October
+                                                2018), London: Ubiquity
+                                                Press, p. 101–112. DOI: https://doi.org/10.5334/bch.h.</li>
+                                            <br>
+                                            <li> Kazhdan, M. and Hoppe, H. (2013). Screened Poisson surface
+                                                reconstruction. ACM Transactions on Graphics, 32(3).
+                                                https://doi.org/10.1145/2487228.2487237</li>
+                                            <br>
+                                            <li> Miller, P. and Richards, J. (1995). The good, the bad, and the
+                                                downright misleading: archaeological adoption of computer visualization.
+                                                In: Huggett, J. and Ryan, N. (eds.), Computer applications and
+                                                quantitative methods in archaeology 1994, Oxford: BAR International
+                                                Series 600, p. 19-22.</li>
+                                            <br>
+                                            <li> Piccoli, C. (2018). Visualizing cityscapes of classical antiquity.
+                                                From early modern reconstruction drawings to digital 3D models : with
+                                                a case study from the ancient town of Koroneia in Boeotia, Greece.
+                                                Oxford: Archaeopress Publishing Ltd. https://doi.org/10.2307/
+                                                j.ctv1zcm26w</li>
+                                            <br>
+                                            <li> Reilly, P. (1991). Towards a virtual archaeology. In: Rahtz, S. and
+                                                Lockyear, K. (eds.), CAA90. Computer Applications and Quantitative
+                                                Methods in Archaeology 1990. British archaeological reports
+                                                international series 565, Oxford: Tempus Reparatum, p. 132-139.</li>
+                                            <br>
+                                            <li> Ryan, N. (1996). Computer-based Visualisation of the Past: Technical
+                                                ‘Realism’ and Historical Credibility. In: Main, P., Higgins, T. and
+                                                Lang, J. (eds.) Imaging the Past: Electronic Imaging and Computer
+                                                Graphics in Museums and Archaeology. British Museum London: Occasional
+                                                Papers, vol. 114, London: British Museum, p. 95-108.</li>
+                                            <br>
+                                            <li> Tucci, G., Bonora, V., Conti, A., Fiorini, L. (2017). High-Quality 3D
+                                                models and their use in a cultural heritage conservation project. Int.
+                                                Arch. Photogramm. Remote Sens. Spatial Inf. Sci. XLII-2/W5, p. 687–693.
+                                                https://doi.org/10.5194/isprs-archives-XLII-2-W5-687-2017</li>
+
+                                        </dl>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- footer-->
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center mb-5 border-top">
+
+                <div class="container border-bottom my-4">
+                    <p class="text-center ">made possible by <a href="https://www.altertumskommission.lwl.org/de/"
+                            class="link-secondary" target="_blank" style="text-decoration: none">Altertumskommission für
+                            Westfalen, LWL</a> </p>
+                </div>
+
+                <p class="col-sm-5 mb-0 text-muted">© 2022 ltharandt - powered by <a href="https://getbootstrap.com/"
+                        class="link-secondary" style="text-decoration: none">Bootstrap</a> and <a
+                        href="https://3dhop.net/" class="link-secondary" style="text-decoration: none">3DHOP</a></p>
+
+                <a href="index.html"> <img src="./img/logo.png" alt="3Duewelsteene Logo" width="50" height="50"
+                        class="d-inline-block align-text-center" /></a>
+
+
+                <ul class="nav col-md-4 justify-content-end">
+                    <li class="nav-item">
+                        <a href="method.html" class="nav-link px-2 text-muted"> <svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenoli"
+                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+                            </svg></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="privacy.html" class="nav-link px-2 text-muted"> <svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-shield-shaded"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenoli"
+                                    d="M8 14.933a.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067v13.866zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" />
+                            </svg></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://mastodon.online/@astronaut_hilde" target="_blank"
+                            class="nav-link px-2 text-muted">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-mastodon" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z" />
+                            </svg></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/3Duewelsteene/3Duewelsteene.github.io"
+                            class="nav-link px-2 text-muted">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-github" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                            </svg></a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+
+        <!-- Bootstrap v5.2 JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+            integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+            integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>
