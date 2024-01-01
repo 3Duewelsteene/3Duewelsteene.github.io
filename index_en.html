@@ -93,27 +93,40 @@
     <div class="col-lg-6 mx-auto">
       <h2 class="display-7 lh-1 m-3 p-3">The 3D reconstructions of the megalithic grave "Devil's Stones" near Heiden,
         Westphalia</h2>
-      <br>
-      <div class="d-grid gap-1 d-md-block justify-content-md-start">
-        <button class="btn btn btn-outline-success btn-lg px-4 me-md-2"
-          onclick="document.location='about_en.html'">History and information about the Düwelsteene</button>
-      </div>
     </div>
   </div>
 
 
-  <!-- video section-->
-  <div class="px-4 py-5 my-5 text-center">
-    <h2 class="display-5 lh-1 mb-3">
-      The Düwelsteene from 3000 BC to today
-    </h2>
-    <video width="1280" height="720" controls muted>
-      <source src="./video/3DuewelsteeneVideo.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <p class="text-muted"> Video showing the changes over time and how the megalithic tomb Düwelsteene was built</p>
+  <!-- context section-->
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
+    <div class="row flex-lg-row align-items-center g-5 py-5">
+      <div class="col-lg-6">
+        <h2 class="display-5 fw-bold lh-1 mb-3">
+          Context
+        </h2>
+        <p class="lead">
+        The megalithic passage grave Düwelsteene is one of the most southwestern graves of the Funnel Beaker culture
+        still in existence. Through ceramic finds and radiocarbon dating of a skull fragment found in the grave, the
+        utilization of the grave can be dated from 3300 BC to 2600 BC.
+        <br>
+        In 1932 after excavations under archaeological supervision, the grave was restored to the
+        appearance it was thought to have had at the time. While moving the
+        stones made the passage grave look composed and gave visitors an idea how the grave could have looked, it also
+        now makes it harder to digitally reconstruct the passage grave, because the megalithic stones are not
+        in their in situ placement anymore.
+        <br>
+        This website was built as a supplement for a master's thesis in Archaeoinformatics at the University of Cologne.
+        </p>
+        <div class="d-grid gap-1 d-md-block justify-content-md-start">
+          <button class="btn btn btn-outline-success btn-lg px-4 me-md-2"
+          onclick="document.location='about_en.html'">History and information about the Düwelsteene</button>
+        </div>
+      </div>
+      <div class="col-12 col-sm-11 col-lg-6 overflow-hidden shadow-md">
+        <img src="./img/2017and1932Render.jpg" class="img-fluid" alt="reconstruction render 1932" loading="lazy" />
+      </div>
+    </div>
   </div>
-
 
   <!-- project section-->
   <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
@@ -144,10 +157,24 @@
     </div>
   </div>
 
-    <!-- information and news section-->
+
+  <!-- video section-->
+  <div class="px-4 py-5 my-5 text-center">
+    <h2 class="display-5 lh-1 mb-3">
+      The Düwelsteene from 3000 BC to today
+    </h2>
+    <video width="1280" height="720" controls muted>
+      <source src="./video/3DuewelsteeneVideo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p class="text-muted"> Video showing the changes over time and how the megalithic tomb Düwelsteene was built</p>
+  </div>
+
+
+  <!-- information and news section-->
   <div class="container-fluid bg-light">
     <div class="container row xxl-10 py-5 my-5 justify-content-end">
-      <div class="col-md-6">
+      <div class="col-md-5">
         <div class="card m-3">
           <div class="card-body">
             <h5 class="card-title">About</h5>
@@ -161,7 +188,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-5">
         <div class="card m-3">
           <div class="card-body">
             <h5 class="card-title">Feedback</h5>
